@@ -12,6 +12,7 @@ import OurPartners from "../OurPartners";
 import Footer from "../Footer";
 import Feedbackform from "../Feedbackform";
 import BackgroundImage from "../BackgroundImage";
+import ServicesAccordion from "../components/ServicesAccordian";
 function Dashboard() {
   return (
     <Box>
@@ -22,6 +23,7 @@ function Dashboard() {
       <ClientsSay />
       <OurPartners />
       <Feedbackform />
+      <ServicesAccordion /> 
       <Footer />
     </Box>
   );

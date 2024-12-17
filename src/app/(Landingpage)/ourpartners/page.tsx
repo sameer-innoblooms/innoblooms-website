@@ -1,139 +1,218 @@
 'use client'
 
 import React from 'react'
-import { Box, Container, Typography, useMediaQuery } from '@mui/material'
+import {
+  Container,
+  Typography,
+  Button,
+  Box,
+  Avatar,
+  AvatarGroup,
+  styled,
+  useMediaQuery
+} from '@mui/material'
+import { ArrowForward as ArrowForwardIcon } from '@mui/icons-material'
+import Image from 'next/image'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 import Slider from 'react-slick'
-import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-let theme = createTheme({
+const theme = createTheme({
   palette: {
     primary: {
-      main: '#1976d2',
+      main: '#000000',
+    },
+    background: {
+      default: '#ffffff',
     },
   },
 })
 
-theme = responsiveFontSizes(theme)
+const StyledImage = styled(Image)(({ theme }) => ({
+  maxWidth: '100%',
+  height: 'auto',
+  objectFit: 'contain',
+  transition: 'opacity 0.3s ease-in-out',
+  '&:hover': {
+    opacity: 0.8,
+  },
+}))
 
-const partnerDetails = [
-  {
-    imag:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkj6H2_50pB8bmlu2kpvxFgFjbJNCLaBMn1A&s'
-  },
-  {
-    imag: "https://www.twmg.com.au/kentico-bronze-partner.png",
-  },
-  {
-    imag: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCq8TE4WX-65fYsT3azz5pNfvG2hZhuJ1c6PONybdthfGaJq6jJLlaKM7UNSB_JAVu3O4&usqp=CAU",
-  },
-  {
-    imag: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSApNBbvV9oNf4-cdTCczXURADnv9liDNzKHA&s",
-  },
-  {
-    imag: "https://blog.markergroupe.com/images/2024/07/amazon-fba-logo-feature.jpg",
-  },
-  {
-    imag:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq2p-6RxAhZyZj1T5r2S6ZsJffhf2n22arGw&s'
-  },
-  {
-    imag:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnsTnxapHtwI7ceGoU1x3doz9Hh67o6ZEXIA&s'
-  },
-  {
-    imag:'https://static.vecteezy.com/system/resources/previews/020/040/714/non_2x/team-community-partners-logo-template-social-network-corporate-branding-identity-free-vector.jpg'
-  }
-]
-
-const PartnersCarousel = () => {
+export default function PartnersPage() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'))
 
+  const partners = [
+    { logo: "/catalyze-capital.png", name: "Catalyze Capital" },
+    { logo: "/gr-associates.png", name: "GR Associates" },
+    { logo: "/krishnanath.png", name: "Krishnanath" },
+    { logo: "/propshell.png", name: "Propshell" },
+    { logo: "/saya.png", name: "SAYA" },
+    { logo: "/divyasree.png", name: "DivyaSree" },
+    { logo: "/harbans.png", name: "Harbans Creations" },
+    { logo: "/benchmark.png", name: "Benchmark Developers" },
+    { logo: "/icipl.png", name: "ICIPL" },
+    { logo: "/skyline.png", name: "Skyline" },
+    { logo: "/esha.png", name: "Esha" },
+    { logo: "/harmony.png", name: "Harmony" },
+    { logo: "/map-infra.png", name: "MAP Infra" },
+    { logo: "/pyramids.png", name: "Pyramids" },
+    { logo: "/subham.png", name: "Subham" },
+    { logo: "/elemental.png", name: "Elemental" },
+    { logo: "/stone.png", name: "Stone Co" },
+    { logo: "/navayuga.png", name: "Navayuga" },
+    { logo: "/rishita.png", name: "Rishita" },
+    { logo: "/triflas.png", name: "Triflas" },
+    // Add all other partners similarly
+  ]
+
+  const teamAvatars = [
+    { avatar: "/avatar1.png?height=48&width=48&text=👤1", name: "Team Member 1" },
+    { avatar: "/avatar2.png?height=48&width=48&text=👤2", name: "Team Member 2" },
+    { avatar: "/avatar3.png?height=48&width=48&text=👤3", name: "Team Member 3" },
+    { avatar: "/avatar1.png?height=48&width=48&text=👤4", name: "Team Member 4" },
+  ]
+
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
-    slidesToShow: isMobile ? 1 : isTablet ? 2 : 4,
+    speed: 1000,
+    slidesToShow: isMobile ? 2 : isTablet ? 3 : 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
-    pauseOnHover: true,
-    arrows: !isMobile,
+    autoplaySpeed: 1500,
+    cssEase: "linear",
+    rows: 4,
+    slidesPerRow: 1,
+    arrows: false,
     responsive: [
       {
         breakpoint: theme.breakpoints.values.md,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          rows: 4,
         }
       },
       {
         breakpoint: theme.breakpoints.values.sm,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
+          rows: 4,
         }
       }
     ]
   }
 
   return (
-    <Slider {...settings}>
-      {partnerDetails.map((partner, index) => (
-        <Box key={index} sx={{ p: { xs: 1, sm: 2 } }}>
-          <Box
-            sx={{
-              height: { xs: 100, sm: 120, md: 150 },
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: 'white',
-              borderRadius: 2,
-              boxShadow: 1,
-              overflow: 'hidden',
-            }}
-          >
-            <img
-              src={partner.imag}
-              alt={`Partner ${index + 1}`}
-              style={{
-                maxWidth: '80%',
-                maxHeight: '80%',
-                objectFit: 'contain',
-              }}
-            />
-          </Box>
-        </Box>
-      ))}
-    </Slider>
-  )
-}
-
-export default function OurPartnersPage() {
-  return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ bgcolor: 'background.default', py: { xs: 4, sm: 6, md: 8 }, mt: { xs: 4, sm: 6, md: 10 } }}>
-        <Container maxWidth="lg">
-          <Typography
-            variant="h2"
-            align="center"
+      <Container maxWidth="xl" sx={{ py: 6, mt: 10 }}>
+        <Box sx={{ mb: 6 }}>
+          <Typography variant="overline" color="text.secondary" gutterBottom>
+            Partners & Team
+          </Typography>
+          <Typography variant="h4" component="h1" gutterBottom fontWeight="bold">
+            Collaborative Excellence: Building Bridges, Driving Success
+          </Typography>
+          <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 'sm' }}>
+            Empowering partnerships and fostering teamwork to achieve unparalleled excellence. 
+            Our dedicated approach and shared vision create a synergy that fuels innovation 
+            and drives sustainable success for all.
+          </Typography>
+        </Box>
+
+        <Box sx={{ 
+          mb: 4,
+          '.slick-slide': {
+            padding: '8px',
+          },
+          '.slick-arrow': {
+            '&:before': {
+              color: '#000',
+            }
+          },
+          '.slick-track': {
+            display: 'flex',
+          }
+        }}>
+          <Slider {...settings}>
+            {partners.map((partner, index) => (
+              <Box key={index}>
+                <Box
+                  sx={{
+                    height: 100,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: 'white',
+                    border: '1px solid',
+                    borderColor: 'grey.200',
+                    borderRadius: 1,
+                    p: 2,
+                    transition: 'all 0.3s ease-in-out',
+                    '&:hover': {
+                      boxShadow: 2,
+                      borderColor: 'grey.300',
+                    },
+                  }}
+                >
+                  <StyledImage
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    width={120}
+                    height={60}
+                    style={{
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
+                </Box>
+              </Box>
+            ))}
+          </Slider>
+        </Box>
+
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: { xs: 'column', sm: 'row' },
+            alignItems: { xs: 'flex-start', sm: 'center' },
+            justifyContent: 'space-between',
+            gap: 2,
+            bgcolor: 'grey.50',
+            p: 3,
+            borderRadius: 2,
+          }}
+        >
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+            <AvatarGroup max={4}>
+              {teamAvatars.map((member, index) => (
+                <Avatar
+                  key={index}
+                  src={member.avatar}
+                  alt={`${member.name}`}
+                  sx={{ width: 48, height: 48, border: 4, borderColor: 'background.paper' }}
+                />
+              ))}
+            </AvatarGroup>
+            <Typography variant="subtitle1" fontWeight="medium">
+              Join the partners network
+            </Typography>
+          </Box>
+          <Button
+            variant="contained"
+            endIcon={<ArrowForwardIcon />}
             sx={{
-              mb: { xs: 3, sm: 4, md: 6 },
-              fontWeight: 'bold',
-              color: 'text.primary',
+              '&:hover .MuiSvgIcon-root': {
+                transform: 'translateX(4px)',
+                transition: 'transform 0.2s',
+              },
             }}
           >
-            Our Partners
-          </Typography>
-          <PartnersCarousel />
-        </Container>
-      </Box>
+            Become a partner
+          </Button>
+        </Box>
+      </Container>
     </ThemeProvider>
   )
 }

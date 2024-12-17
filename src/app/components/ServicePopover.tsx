@@ -1,113 +1,344 @@
-"use client"
-import React, { useState } from 'react';
-import { Box, Typography } from '@mui/material';
-import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+"use client";
+// import React, { useState } from 'react';
+// import { Box, Typography } from '@mui/material';
+// import Link from 'next/link';
+// import { usePathname, useRouter } from 'next/navigation';
+
+// const ServiceSubcategories = [
+//   {
+//     category: 'Web Development',
+//     subcategories: [
+//       { text: 'Frontend Development', href: '/services/frontend' },
+//       { text: 'Backend Development', href: '/services/backend' },
+//       { text: 'Full Stack Solutions', href: '/services/fullstack' }
+//     ]
+//   },
+//   {
+//     category: 'Digital Marketing',
+//     subcategories: [
+//       { text: 'SEO Optimization', href: '/services/seo' },
+//       { text: 'Social Media Marketing', href: '/services/social-media' },
+//       { text: 'Content Marketing', href: '/services/content-marketing' }
+//     ]
+//   },
+//   {
+//     category: 'Cloud Solutions',
+//     subcategories: [
+//       { text: 'Cloud Migration', href: '/services/cloud-migration' },
+//       { text: 'Cloud Management', href: '/services/cloud-management' },
+//       { text: 'Cloud Security', href: '/services/cloud-security' }
+//     ]
+//   }
+// ];
+
+// const ServicesDropdown = () => {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const router = useRouter()
+//   const pathname = usePathname()
+
+//   return (
+//     <Box
+//       onMouseEnter={() => setIsOpen(true)}
+//       onMouseLeave={() => setIsOpen(false)}
+//       sx={{ position: 'relative' }}
+//       onClick = {()=> router.push('/services')}
+//     >
+//       <Typography
+//         variant="h6"
+//         color="white"
+//         component="div"
+//         sx={{
+//           px: 4,
+//           py: 3,
+//           fontSize: { xs: "16px", sm: "18px" },
+//           cursor: 'pointer',
+//           fontWeight: '10px',
+//           textDecoration: pathname === '/services' ? "underline" : "",
+//         }}
+//       >
+//         Services
+//       </Typography>
+
+//       {isOpen && (
+//         <Box
+//           sx={{
+//             position: 'absolute',
+//             top: '100%',
+//             left: 0,
+//             width: '300px',
+//             bgcolor: 'white',
+//             boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+//             borderRadius: '8px',
+//             p: 2,
+//             zIndex: 1000,
+//           }}
+//         >
+//           {ServiceSubcategories.map((serviceGroup) => (
+//             <Box key={serviceGroup.category} sx={{ mb: 2 }}>
+//               <Typography
+//                 variant="subtitle1"
+//                 sx={{
+//                   fontWeight: 'bold',
+//                   color: 'black',
+//                   mb: 1,
+//                   borderBottom: '1px solid #eee'
+//                 }}
+//               >
+//                 {serviceGroup.category}
+//               </Typography>
+//               {serviceGroup.subcategories.map((subcat) => (
+//                 <Link
+//                   key={subcat.text}
+//                   href={subcat.href}
+//                   passHref
+//                 >
+//                   <Typography
+//                     sx={{
+//                       color: 'black',
+//                       p: 1,
+//                       '&:hover': {
+//                         bgcolor: '#f0f0f0',
+//                         borderRadius: '4px'
+//                       }
+//                     }}
+//                   >
+//                     {subcat.text}
+//                   </Typography>
+//                 </Link>
+//               ))}
+//             </Box>
+//           ))}
+//         </Box>
+//       )}
+//     </Box>
+//   );
+// };
+
+// export default ServicesDropdown;
+
+"use client";
+import React, { useState } from "react";
+import { Box, Typography, Grid } from "@mui/material";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const ServiceSubcategories = [
-  { 
-    category: 'Web Development', 
-    subcategories: [
-      { text: 'Frontend Development', href: '/services/frontend' },
-      { text: 'Backend Development', href: '/services/backend' },
-      { text: 'Full Stack Solutions', href: '/services/fullstack' }
-    ]
+  {
+    category: "BUSINESS CONSULTING",
+    description:
+      "Streamline operations, boost efficiency, and unlock growth with cutting-edge AI solutions tailored to your needs.",
+    // subcategories: [
+    //   { text: "Strategic Planning", href: "/services/strategic-planning" },
+    //   { text: "Process Optimization", href: "/services/process-optimization" },
+    //   { text: "Business Analysis", href: "/services/business-analysis" },
+    // ],
   },
-  { 
-    category: 'Digital Marketing', 
-    subcategories: [
-      { text: 'SEO Optimization', href: '/services/seo' },
-      { text: 'Social Media Marketing', href: '/services/social-media' },
-      { text: 'Content Marketing', href: '/services/content-marketing' }
-    ]
+  {
+    category: "AUTOMATION WITH AI",
+    description:
+      "Streamline operations, boost efficiency, and unlock growth with cutting-edge AI solutions tailored to your needs.",
+    // subcategories: [
+    //   { text: "AI Integration", href: "/services/ai-integration" },
+    //   { text: "Process Automation", href: "/services/process-automation" },
+    //   { text: "Machine Learning Solutions", href: "/services/machine-learning" },
+    // ],
   },
-  { 
-    category: 'Cloud Solutions', 
-    subcategories: [
-      { text: 'Cloud Migration', href: '/services/cloud-migration' },
-      { text: 'Cloud Management', href: '/services/cloud-management' },
-      { text: 'Cloud Security', href: '/services/cloud-security' }
-    ]
-  }
+  {
+    category: "RESOURCE AUGMENTATION",
+    description:
+      "Streamline operations, boost efficiency, and unlock growth with cutting-edge AI solutions tailored to your needs.",
+    // subcategories: [
+    //   { text: "Staff Augmentation", href: "/services/staff-augmentation" },
+    //   { text: "Team Extension", href: "/services/team-extension" },
+    //   { text: "Dedicated Resources", href: "/services/dedicated-resources" },
+    // ],
+  },
+  {
+    category: "SOFTWARE SERVICES",
+    description:
+      "Streamline operations, boost efficiency, and unlock growth with cutting-edge AI solutions tailored to your needs.",
+    // subcategories: [
+    //   { text: "Custom Development", href: "/services/custom-development" },
+    //   { text: "Application Modernization", href: "/services/app-modernization" },
+    //   { text: "Quality Assurance", href: "/services/quality-assurance" },
+    // ],
+  },
 ];
 
 const ServicesDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter()
-  const pathname = usePathname()
+  const router = useRouter();
+  const pathname = usePathname();
 
   return (
-    <Box 
+    <Box
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
-      sx={{ position: 'relative' }}
-      onClick = {()=> router.push('/services')}
+      sx={{ position: "static" }}
     >
       <Typography
         variant="h6"
-        color="white"
+        color="black"
         component="div"
-        sx={{ 
-          px: 4, 
-          py: 3, 
+        onClick={() => router.push("/services")}
+        sx={{
+          color: "white",
+          px: 4,
+          py: 3,
           fontSize: { xs: "16px", sm: "18px" },
-          cursor: 'pointer',
-          fontWeight: '10px',
-          textDecoration: pathname === '/services' ? "underline" : "",
+          cursor: "pointer",
+          fontWeight: 500,
+          borderBottom: pathname === "/services" ? "2px solid white" : "none",
+          // ":hover": {
+          //   borderBottom: "2px solid white",
+          // },
+          display: "inline-block",
         }}
       >
-        Services
+        Service
       </Typography>
-      
+
       {isOpen && (
         <Box
           sx={{
-            position: 'absolute',
-            top: '100%',
+            position: "absolute",
+            top: "100%",
             left: 0,
-            width: '300px',
-            bgcolor: 'white',
-            boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-            borderRadius: '8px',
-            p: 2,
+            right: 0,
+            width: "100vw",
+            bgcolor: "white",
+            boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+            p: 4,
             zIndex: 1000,
           }}
         >
-          {ServiceSubcategories.map((serviceGroup) => (
-            <Box key={serviceGroup.category} sx={{ mb: 2 }}>
-              <Typography 
-                variant="subtitle1" 
-                sx={{ 
-                  fontWeight: 'bold', 
-                  color: 'black', 
-                  mb: 1,
-                  borderBottom: '1px solid #eee'
+          <Grid
+            container
+            spacing={4}
+            sx={{ maxWidth: "1400px", margin: "0 auto" }}
+          >
+            <Grid item xs={12} md={3}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  height: "100%",
+                  justifyContent: "center",
                 }}
               >
-                {serviceGroup.category}
-              </Typography>
-              {serviceGroup.subcategories.map((subcat) => (
-                <Link 
-                  key={subcat.text} 
-                  href={subcat.href} 
-                  passHref
+                <Image
+                  src="/placeholder.svg?height=100&width=100"
+                  alt="Our Services"
+                  width={100}
+                  height={100}
+                />
+                <Typography
+                  variant="h2"
+                  sx={{
+                    fontWeight: "bold",
+                    color: "black",
+                    fontSize: "3rem",
+                    mt: 2,
+                    lineHeight: 1.2,
+                  }}
                 >
-                  <Typography
-                    sx={{
-                      color: 'black',
-                      p: 1,
-                      '&:hover': {
-                        bgcolor: '#f0f0f0',
-                        borderRadius: '4px'
-                      }
-                    }}
-                  >
-                    {subcat.text}
-                  </Typography>
-                </Link>
-              ))}
-            </Box>
-          ))}
+                  OUR
+                  <br />
+                  SERVICES
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={9}>
+              <Grid container spacing={4}>
+                {ServiceSubcategories.map((serviceGroup) => (
+                  <Grid item xs={12} sm={6} md={3} key={serviceGroup.category}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 2,
+                        height: "100%",
+                      }}
+                    >
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontWeight: "bold",
+                          color: "black",
+                          fontSize: "1.1rem",
+                          borderBottom: "2px solid #eee",
+                          pb: 1,
+                        }}
+                      >
+                        {serviceGroup.category}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          color: "#666",
+                          mb: 2,
+                          fontSize: "0.9rem",
+                          lineHeight: 1.5,
+                        }}
+                      >
+                        {serviceGroup.description}
+                      </Typography>
+                      {/* <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, flexGrow: 1 }}>
+                        {serviceGroup.subcategories.map((subcat) => (
+                          <Link key={subcat.text} href={subcat.href} passHref>
+                            <Typography
+                              sx={{
+                                color: "#333",
+                                fontSize: "0.9rem",
+                                p: 1,
+                                transition: "all 0.2s ease",
+                                "&:hover": {
+                                  bgcolor: "#f5f5f5",
+                                  borderRadius: "6px",
+                                  color: "#000",
+                                  pl: 2,
+                                },
+                              }}
+                            >
+                              {subcat.text}
+                            </Typography>
+                          </Link>
+                        ))}
+                      </Box> */}
+                      <Link
+                        href={`/services/${serviceGroup.category
+                          .toLowerCase()
+                          .replace(/\s+/g, "-")}`}
+                        passHref
+                      >
+                        <Typography
+                          sx={{
+                            color: "#333",
+                            fontSize: "0.9rem",
+                            mt: "auto",
+                            pt: 2,
+                            textAlign: "center",
+                            border: "1px solid #ddd",
+                            borderRadius: "6px",
+                            p: 1,
+                            transition: "all 0.2s ease",
+                            "&:hover": {
+                              bgcolor: "#f5f5f5",
+                              borderColor: "#000",
+                            },
+                          }}
+                        >
+                          View more
+                        </Typography>
+                      </Link>
+                    </Box>
+                  </Grid>
+                ))}
+              </Grid>
+            </Grid>
+          </Grid>
         </Box>
       )}
     </Box>

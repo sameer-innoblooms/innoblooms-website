@@ -1,14 +1,16 @@
 import Services from '@/app/services'
+import BusinessConsluting from '@/app/services/BusinessConsulting'
 import { Box } from '@mui/material'
 import React from 'react'
 
 function Servicespage() {
   return (
-    <Box sx={{
-      mt: 20
-    }}>
-      <Services/>
-    </Box>
+    <>
+        <BusinessConsluting/>
+        <BusinessConsluting/>
+        <BusinessConsluting/>
+        <BusinessConsluting/>
+    </>
   )
 }
 

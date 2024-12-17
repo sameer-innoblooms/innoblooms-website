@@ -41,6 +41,7 @@ const Header = () => {
     { text: "Home", href: "/" },
     { text: "About us", href: "/aboutus" },
     { text: "Services", href: "/services" },
+    { text: "Projects", href: "/projects" },
     { text: "Our Partners", href: "/ourpartners" },
     { text: "Blogs", href: "/blogs" },
   ];
@@ -62,13 +63,21 @@ const Header = () => {
               color="white"
               component="div"
               sx={{
-                px: { xs: 1, sm: 2, md: 3 },
-                height: { xs: '40px', sm: '50px', md: '60px' },
-                display: 'flex',
-                alignItems: 'center',
-                fontSize: { xs: "14px", sm: "16px", md: "18px" },
-                fontWeight: "normal",
-                textDecoration: pathname === link.href ? "underline" : "none",
+                color: 'white',
+          px: 4,
+          py: 3,
+          fontSize: { xs: "16px", sm: "18px" },
+          cursor: "pointer",
+          fontWeight: 500,
+                
+          borderBottom: pathname === link.href ? "2px solid white" : "none",
+          // ":hover": {
+          //   borderBottom: "2px solid white",
+          // },
+          display: "inline-block",
+                // display: "inline-block",
+              
+                // textDecoration: pathname === link.href ? "underline" : "none",
                 transition: "color 0.3s ease",
                 "&:hover": {
                   color: "#FFB247",

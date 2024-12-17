@@ -23,19 +23,20 @@ import { styled } from "@mui/material/styles";
 import { useRouter } from "next/navigation";
 
 const GradientBackground = styled(Box)(({ theme }) => ({
-  background: "linear-gradient(135deg, #000000 0%, #00001a 100%)",
-  // background: '#000000',
+  // background: "linear-gradient(135deg, #000000 0%, #00001a 100%)",
+
+  background: '#000000',
   color: "white",
   position: "relative",
   "&::before": {
     content: '""',
     position: "absolute",
-    top: "-50px",
+    // top: "-50px",
     left: 0,
     right: 0,
-    height: "50px",
+    // height: "50px",
     background: "white",
-    clipPath: "ellipse(50% 100% at 50% 100%)",
+    // clipPath: "ellipse(50% 100% at 50% 100%)",
   },
 }));
 
