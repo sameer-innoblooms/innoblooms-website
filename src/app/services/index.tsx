@@ -1,4 +1,7 @@
+import { Padding, Widgets } from "@mui/icons-material";
 import { Box, Grid, Typography, useMediaQuery, Theme } from "@mui/material";
+import { BookX, Scale } from "lucide-react";
+import { transform } from "next/dist/build/swc/generated-native";
 import React from "react";
 
 const Services = () => {
@@ -10,7 +13,8 @@ const Services = () => {
           sx={{
             textDecoration: "underline",
             textAlign: "center",
-            color: "#a6a5b1",
+            // color: "#a6a5b1",
+            color: 'black',
             mt: 5,
             fontWeight: "bold",
             textTransform: "uppercase",
@@ -44,6 +48,8 @@ const Services = () => {
         >
           <Box
             sx={{
+              display:'flex',
+              flexDirection:'column',
               border: "0.5px solid #ccc",
               borderRadius: 4,
               backgroundImage:
@@ -51,20 +57,63 @@ const Services = () => {
               backgroundSize: "cover",
               backgroundPosition: "center",
               height: { xs: "250px", sm: "300px", md: "350px" },
-              display: "flex",
-              alignItems: "flex-end",
+              // display: "flex",
+              alignItems: "center",
+              justifyContent:'flex-end',
               p: 3,
+              "&:hover  .hiddenContent": {
+                transition:'0.3s ease-in-out',
+                transform: 'Scale(1.05) ',
+                display:'flex',
+                cursor:'pointer'
+              },
+              "&:hover": {
+                transition:'0.3s ease-in-out',
+                transform: 'Scale(1.05) ',
+              }         
             }}
+          
           >
             <Typography
-              variant="h6"
+              variant="h6" marginLeft='-8px'
               sx={{
                 fontWeight: "bold",
                 color: "white",
+              }}>Business Consulting
+            </Typography>
+
+            <Box className="hiddenContent"
+              sx={{
+                opacity: "1",
+                display:'none',
+                alignItems:'center',
+                justifyContent:'center',
+                flexDirection:'column'
               }}
             >
-              Business Consulting
-            </Typography>
+              
+              <Typography variant="subtitle1" 
+              sx={{
+              color:"white",
+              lineHeight:'1.1',
+              marginTop:'8px',
+              marginBottom:'-10px',
+              }}>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor debitis sint dicta ullam alias eveniet, maiores magnam nobis soluta. Adipisci impedit harum, iusto quaerat amet eius sequi architecto nobis molestias!
+              </Typography>
+              ,
+              <Typography variant="button" color="red"
+               sx={{
+                border:'2px solid red',
+                width:'100px',
+                padding:'3px 5px',
+                borderRadius:'5px'
+
+              }}
+              >
+                View More
+              </Typography>
+            </Box>
           </Box>
         </Grid>
 
