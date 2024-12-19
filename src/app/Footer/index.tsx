@@ -22,7 +22,7 @@ import {
 import { styled } from "@mui/material/styles";
 import { useRouter } from "next/navigation";
 
-const GradientBackground = styled(Box)(({ theme }) => ({
+const GradientBackground = styled(Box)(({  }) => ({
   // background: "linear-gradient(135deg, #000000 0%, #00001a 100%)",
 
   background: '#000000',
@@ -40,7 +40,7 @@ const GradientBackground = styled(Box)(({ theme }) => ({
   },
 }));
 
-const StyledLink = styled(Link)(({ theme }) => ({
+const StyledLink = styled(Link)(({  }) => ({
   color: "white",
   textDecoration: "none",
   "&:hover": {
@@ -73,7 +73,7 @@ export default function Footer() {
             component="h2"
             sx={{ color: "white", maxWidth: 600 }}
           >
-            Let us know if there's an opportunity for us to build something
+            Let us know if there&apos;s an opportunity for us to build something
             awesome together.
           </Typography>
           <Button

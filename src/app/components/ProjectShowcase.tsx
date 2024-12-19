@@ -13,6 +13,7 @@ import {
 } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Carousel from 'react-material-ui-carousel';
+import Image from 'next/image';
 
 const carouselItems = [
   {
@@ -149,6 +150,7 @@ export default function ProjectShowcase() {
               animation="slide"
               navButtonsAlwaysVisible
               indicators={false}
+              
               onChange={(index: any) => setActiveStep(index)}
               navButtonsProps={{
                 style: {
@@ -185,7 +187,7 @@ export default function ProjectShowcase() {
                       }}>
                         {item.category}
                       </Typography>
-                      <img 
+                      <Image
                         src={item.flag}
                         alt="Country Flag"
                         style={{ height: 20 }}

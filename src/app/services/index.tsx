@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, useMediaQuery, Theme } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 
 const Services = () => {

@@ -13,7 +13,9 @@ interface SliderSettings {
   autoplay:boolean;
   autoplaySpeed:number;
   cssEase:any;
+  
 }
+
 
 function SampleNextArrow(props:any) {
   const { className, style, onClick } = props;
@@ -67,7 +69,8 @@ const OurPartners: React.FC = () => {
    
     
   ];
-  var settings: SliderSettings = {
+  //@ts-expect-error : should expect a string
+  const settings: SliderSettings = {
  
     dots: true,
     infinite: true,
@@ -77,8 +80,8 @@ const OurPartners: React.FC = () => {
     speed: 4000,
     autoplaySpeed: 500,
     cssEase: "linear",
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
+    // nextArrow: <SampleNextArrow />,
+    // prevArrow: <SamplePrevArrow />
 
   };
 

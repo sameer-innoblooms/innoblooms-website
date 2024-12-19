@@ -122,48 +122,31 @@ import { Box, Typography, Grid } from "@mui/material";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const ServiceSubcategories = [
   {
     category: "BUSINESS CONSULTING",
     description:
       "Streamline operations, boost efficiency, and unlock growth with cutting-edge AI solutions tailored to your needs.",
-    // subcategories: [
-    //   { text: "Strategic Planning", href: "/services/strategic-planning" },
-    //   { text: "Process Optimization", href: "/services/process-optimization" },
-    //   { text: "Business Analysis", href: "/services/business-analysis" },
-    // ],
+
   },
   {
     category: "AUTOMATION WITH AI",
     description:
       "Streamline operations, boost efficiency, and unlock growth with cutting-edge AI solutions tailored to your needs.",
-    // subcategories: [
-    //   { text: "AI Integration", href: "/services/ai-integration" },
-    //   { text: "Process Automation", href: "/services/process-automation" },
-    //   { text: "Machine Learning Solutions", href: "/services/machine-learning" },
-    // ],
+
   },
   {
     category: "RESOURCE AUGMENTATION",
     description:
       "Streamline operations, boost efficiency, and unlock growth with cutting-edge AI solutions tailored to your needs.",
-    // subcategories: [
-    //   { text: "Staff Augmentation", href: "/services/staff-augmentation" },
-    //   { text: "Team Extension", href: "/services/team-extension" },
-    //   { text: "Dedicated Resources", href: "/services/dedicated-resources" },
-    // ],
+
   },
   {
     category: "SOFTWARE SERVICES",
     description:
       "Streamline operations, boost efficiency, and unlock growth with cutting-edge AI solutions tailored to your needs.",
-    // subcategories: [
-    //   { text: "Custom Development", href: "/services/custom-development" },
-    //   { text: "Application Modernization", href: "/services/app-modernization" },
-    //   { text: "Quality Assurance", href: "/services/quality-assurance" },
-    // ],
+
   },
 ];
 
@@ -217,37 +200,44 @@ const ServicesDropdown = () => {
           <Grid
             container
             spacing={4}
-            sx={{ maxWidth: "1400px", margin: "0 auto" }}
+            sx={{ maxWidth: "1400px", }}
           >
             <Grid item xs={12} md={3}>
               <Box
                 sx={{
                   display: "flex",
-                  flexDirection: "column",
+                  flexDirection: 'column',
                   height: "100%",
                   justifyContent: "center",
                 }}
               >
-                <Image
-                  src="/placeholder.svg?height=100&width=100"
-                  alt="Our Services"
-                  width={100}
-                  height={100}
-                />
+               
                 <Typography
                   variant="h2"
                   sx={{
                     fontWeight: "bold",
                     color: "black",
-                    fontSize: "3rem",
-                    mt: 2,
+                    fontSize: "50px",
+                    // mt: 1,
                     lineHeight: 1.2,
+                    textAlign:'center'
                   }}
                 >
                   OUR
                   <br />
                   SERVICES
                 </Typography>
+                <Box sx={{
+                pl:12
+                }}>
+                <Image
+                  src="/Setting-image.png?height=100&width=100"
+                  alt="Our Services"
+                  width={100}
+                  height={100}
+                  
+                />
+                </Box>
               </Box>
             </Grid>
             <Grid item xs={12} md={9}>
@@ -267,7 +257,7 @@ const ServicesDropdown = () => {
                         sx={{
                           fontWeight: "bold",
                           color: "black",
-                          fontSize: "1.1rem",
+                          fontSize: '16px',
                           borderBottom: "2px solid #eee",
                           pb: 1,
                         }}

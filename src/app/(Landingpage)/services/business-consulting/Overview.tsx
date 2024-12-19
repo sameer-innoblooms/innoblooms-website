@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Container, Grid, Typography, useTheme, useMediaQuery } from '@mui/material'
+import { Box, Container, Grid, Typography, useTheme } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import Image from 'next/image'
 
@@ -34,7 +34,7 @@ const StyledDescription = styled(Typography)(({ theme }) => ({
   lineHeight: 1.7,
 }))
 
-const ImageWrapper = styled(Box)(({ theme }) => ({
+const ImageWrapper = styled(Box)(({  }) => ({
   position: 'relative',
   '&::before': {
     content: '""',
@@ -50,8 +50,8 @@ const ImageWrapper = styled(Box)(({ theme }) => ({
 }))
 
 export default function Overview() {
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'))
+  // const theme = useTheme()
+  // const isMobile = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <Box

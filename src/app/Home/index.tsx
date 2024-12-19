@@ -3,10 +3,9 @@ import React from "react";
 import Carousel from "react-material-ui-carousel";
 import { Box } from "@mui/material";
 import SliderCard from "./SliderCard";
-import Headers from "../Headers";
-import { relative } from "path";
+
 function Home() {
-  var SliderDetails = [
+  const SliderDetails = [
     {
       image:
         "https://png.pngtree.com/background/20230617/original/pngtree-white-futuristic-robot-encased-in-round-machine-with-neon-lights-on-picture-image_3701083.jpg",

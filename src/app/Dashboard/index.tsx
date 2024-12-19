@@ -3,7 +3,6 @@ import React from "react";
 import Home from "../Home/index";
 import { Box } from "@mui/material";
 import Services from "../services";
-import ClientsCard from "../ClientsSay/ClientsCard";
 import ClientsSay from "../ClientsSay";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

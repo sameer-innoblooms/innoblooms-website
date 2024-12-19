@@ -8,25 +8,25 @@ export default function WorkingProcess() {
       number: '01',
       title: 'Ideation',
       content: 'Everything starts with a plan, we at moptra help your ideas flourish.',
-      color: '#8fbaa7'
+      color: '#fff1f2'
     },
     {
       number: '02',
       title: 'Planning',
       content: 'A well planned job is a work half completed- our strength lies in planning the project with perfection.',
-      color: '#8fbaa7'
+      color: '#f3e8ff'
     },
     {
       number: '03',
       title: 'Execution',
       content: 'This is where our core strength comes in - 30+ years of combined technical and project management expertise executes your idea to life',
-      color: '#8fbaa7'
+      color: '#E5EDFF'
     },
     {
       number: '04',
       title: 'Delivery',
       content: "Timely Delivery or take your money back - that's our motto! We are here to make sure we as partners deliver solutions to your business that helps you sky rocket",
-      color: '#8fbaa7'
+      color: '#F3F4F6'
     }
   ]
 
@@ -35,7 +35,7 @@ export default function WorkingProcess() {
       <Box sx={{ textAlign: 'center', mb: 6 }}>
         <Typography 
           variant="overline" 
-          sx={{ color: '#663399', fontWeight: 500 }}
+          sx={{ color: '#663399', fontWeight: 500, fontSize: 18 }}
         >
           WORKING PROCESS
         </Typography>
@@ -74,15 +74,18 @@ export default function WorkingProcess() {
           }
         }}
       >
-        {processes.map((process, index) => (
+        {processes.map((process) => (
           <Card
+          // elevation={10}
             key={process.number}
             sx={{
+  
+              boxShadow: 1,
               flex: 1,
               minHeight: 280,
               backgroundColor: process.color,
               color: process.color === '#663399' ? '#FFFFFF' : 'inherit',
-              boxShadow: 'none',
+              // boxShadow: 'none',
               border: '1px solid #E0E0E0',
               borderRadius: 2,
               position: 'relative',
@@ -98,8 +101,10 @@ export default function WorkingProcess() {
                 variant="h6"
                 component="div"
                 sx={{
-                  backgroundColor: '#663399',
+                  boxShadow: 1,
+                  backgroundColor: '#083344',
                   color: '#FFFFFF',
+                  // color: '#0000000',
                   width: 'fit-content',
                   px: 3,
                   py: 1,

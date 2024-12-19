@@ -6,19 +6,19 @@ import { Cloud, Devices, Science } from '@mui/icons-material'
 export default function WhatWeDo() {
   const services = [
     {
-      title: 'Native App Development',
+      title: 'Strategy consulting',
       icon: <Science sx={{ fontSize: 64, color: '#6B2FB3' }} />,
-      description: 'Native Mobile Application Development is one of the best ways to make your business more nourishing in the presence large number of business in the wide market of mobile app development.'
+      description: 'Strategy consultants advise organisations on high-level decisions in an unbiased fashion, using deep industry knowledge to deliver the best results.'
     },
     {
-      title: 'Hybrid App Development',
+      title: 'HR Consulting',
       icon: <Cloud sx={{ fontSize: 64, color: '#6B2FB3' }} />,
-      description: 'Are you looking for a Hybrid Mobile App Development Company? We have highly expert developers who are experts in their own field. We provide effectively and the most affordable options for Hybrid App Development'
+      description: ' A Human Resources Consultant initiates and leads HR programs and projects, conducts research to identify issues, provides advice and recommendations, formulates strategic plans, and assists in recruitment, training, and management of personnel.'
     },
     {
-      title: 'Web App Development',
+      title: 'Information technology consulting',
       icon: <Devices sx={{ fontSize: 64, color: '#6B2FB3' }} />,
-      description: 'We at Moptra provide the best in class Web App Development Services created using the latest technology as per the industry standard within the budget limits given to us by our clients.'
+      description: 'This can involve assessing elements of a company&apos;s computer systems like cybersecurity, software performance and data and analytics that can affect how a business might benefit from the technology they use.'
     }
   ]
 
@@ -44,7 +44,7 @@ export default function WhatWeDo() {
             fontWeight: 600,
           }}
         >
-          Types Of Business Consulting
+          What We Do
         </Typography>
         <Grid container spacing={4}>
           {services.map((service, index) => (
@@ -67,15 +67,18 @@ export default function WhatWeDo() {
                     alignItems: 'center',
                     pt: 4,
                     pb: 2,
+                    bgcolor: 'black'
                   }}
                 >
                   {service.icon}
                 </Box>
                 <Box
                   sx={{
-                    bgcolor: '#6B2FB3',
+                    // bgcolor: '#6B2FB3',
                     py: 2,
                     px: 3,
+                    bgcolor: 'black'
+
                   }}
                 >
                   <Typography
@@ -84,6 +87,7 @@ export default function WhatWeDo() {
                       color: 'white',
                       textAlign: 'center',
                       fontWeight: 500,
+                      
                     }}
                   >
                     {service.title}

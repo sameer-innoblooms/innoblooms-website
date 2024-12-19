@@ -4,7 +4,6 @@ import React from 'react'
 import { Box, Card, CardContent, CardMedia, Typography, useMediaQuery, useTheme } from "@mui/material"
 import Slider from "react-slick"
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { grey } from '@mui/material/colors'
 
 
 interface ClientCardDetails {
@@ -180,7 +179,7 @@ const ClientsSay: React.FC = () => {
           At Innoblooms, we pride ourselves on delivering results that drive success.
         </Typography>
         <Typography variant="body1">
-          Here's what some of our clients have to say about working with us:
+          Here&apos;s what some of our clients have to say about working with us:
         </Typography>
       </Box>
 

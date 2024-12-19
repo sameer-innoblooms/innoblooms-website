@@ -1,16 +1,10 @@
-import React from "react";
-import Container from "@mui/material/Container";
-import { Box, Typography } from "@mui/material";
-import Overview from "./Overview";
-import ServicesAccordion from "@/app/components/ServicesAccordian";
-import Footer from "@/app/Footer";
-import WhatWeDo from "./TypesPage";
+import { Box, Typography } from '@mui/material'
+import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <Container maxWidth="xl" disableGutters>
-        <Box
+    <>
+    <Box
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -47,7 +41,7 @@ const page = () => {
               zIndex: 9,
             }}
           >
-            Business Consulting
+            Software Services
           </Typography>
           <Typography
             variant="body1"
@@ -62,13 +56,8 @@ const page = () => {
             solutions that suit the needs at every level.
           </Typography>
         </Box>
-        <Overview />
-        <WhatWeDo />
-        <ServicesAccordion />
-        <Footer />
-      </Container>
-    </div>
-  );
-};
+    </>
+  )
+}
 
-export default page;
+export default page

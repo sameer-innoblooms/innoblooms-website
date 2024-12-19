@@ -1,5 +1,6 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import React from "react";
+
 export default function ClientsCard({ cardDetails }: any) {
   //console.log("----obj", cardDetails);
   return (

@@ -1,15 +1,18 @@
 "use client"
 
-import { Container, Box, Typography } from "@mui/material";
+import { Container} from "@mui/material";
 import React from "react";
 import WorkingProcess from ".";
-import Feedbackform from "@/app/Feedbackform";
 import WhyChooseUs from "./WhyChooseUs";
+import FounderPage from "./FoundersPage";
+import AboutusSection from "./AboutusSection";
+import Process from "./Process";
 
 function About() {
   return (
     <Container maxWidth="xl" disableGutters>
-      <Box
+      <AboutusSection/>
+      {/* <Box
         sx={{
           height: { xs: "50vh", sm: "60vh", md: "70vh" },
           width: "100%",
@@ -22,7 +25,7 @@ function About() {
           maxHeight: "1500px",
           backgroundImage: `url('https://img.freepik.com/premium-photo/computer-teamwork-solving-problems-tech-industry_1274913-37557.jpg')`,
         }}
-      />
+      /> */}
       {/* <Box 
         sx={{
           display: 'flex', 
@@ -60,6 +63,9 @@ function About() {
           </Typography>
         </Box>
       </Box>   */}
+      <FounderPage/>
+      <Process/>
+      {/* <OurProcess/> */}
       <WorkingProcess />
       <WhyChooseUs/>
       

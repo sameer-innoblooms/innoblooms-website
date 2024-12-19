@@ -65,7 +65,7 @@ const BusinessConsulting = () => {
                 </Typography>
               </Box>
               <Typography variant="body1" color="text.secondary" paragraph>
-                No, we don't mind competing with the gold fish in keeping the attention span of your users. 
+                No, we don&apos;t mind competing with the gold fish in keeping the attention span of your users. 
                 We have built mobile apps for the most impatient, unforgivable of your users. 
                 We feel a kick when these users turn into your brand advocates (read addicts).
               </Typography>

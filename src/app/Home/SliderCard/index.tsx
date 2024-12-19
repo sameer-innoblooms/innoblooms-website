@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react";
-import { Box, Button, Typography, useTheme, useMediaQuery } from "@mui/material";
+import { Box, Button, Typography, useTheme, } from "@mui/material";
 
 interface TabContent {
   text1: string;
@@ -19,9 +19,9 @@ interface SliderCardProps {
 }
 
 const SliderCard: React.FC<SliderCardProps> = ({ item }) => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+  // const theme = useTheme();
+  // const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  // const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
 
   return (
     <Box
