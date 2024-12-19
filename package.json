@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.13.5",
     "@mui/icons-material": "^6.0.0-rc.0",
     "@mui/material": "^6.0.0-rc.0",
+    "lottie-react": "^2.4.0",
     "lucide-react": "^0.462.0",
     "next": "15.0.3",
     "react": "^18.3.1",

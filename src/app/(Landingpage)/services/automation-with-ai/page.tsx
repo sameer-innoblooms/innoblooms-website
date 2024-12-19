@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 import { Box, Typography } from '@mui/material'
+=======
+>>>>>>> 220ec5cd57d24d04d093fa20b16becad27d266c6
 import React from 'react'
 
 const page = () => {
   return (
+<<<<<<< HEAD
     <>
     <Box
           sx={{
@@ -61,3 +65,10 @@ const page = () => {
 }
 
 export default page
+=======
+    <div>Resource Augmentation</div>
+  )
+}
+
+export default page
+>>>>>>> 220ec5cd57d24d04d093fa20b16becad27d266c6

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import Lottie from 'lottie-react';
-import businessConsultancy from '../lotties/businessConsultancy.json'
+import automation from '../lotties/automation.json'
 import { 
   Box, 
   Container, 
@@ -38,7 +38,8 @@ const TechIcon = styled('img')({
   marginBottom: 16,
 });
 
-const BusinessConsulting = () => {
+const AutomationInAi = () => {
+
   const technologies = [
     { name: 'React Native', icon: '/path-to-react-native-icon.svg' },
     { name: 'Swift', icon: '/path-to-swift-icon.svg' },
@@ -47,15 +48,15 @@ const BusinessConsulting = () => {
   ];
 
   const features = [
-    'Financial Consulting',
-    'IT Consulting',
-    'Human Resources Consulting',
-    'Marketing Consulting',
+    'Increased Efficiency',
+    'Improved Accuracy',
+    'Scalability',
+    'Enhanced Decision-Making',
   ];
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ bgcolor: 'background.default', 
+      <Box sx={{ bgcolor: 'background.default',
         //  minHeight: '100vh',
           py: 16 }}>
         <Container>
@@ -66,17 +67,11 @@ const BusinessConsulting = () => {
                   UN-PUT-DOWNABLE
                 </Typography> */}
                 <Typography variant="h2" color="primary" fontWeight="bold" gutterBottom>
-                 Business Consultancy
+                    Automation in AI
                 </Typography>
               </Box>
               <Typography variant="body1" color="text.secondary" paragraph>
-<<<<<<< HEAD
-                No, we don&apos;t mind competing with the gold fish in keeping the attention span of your users. 
-                We have built mobile apps for the most impatient, unforgivable of your users. 
-                We feel a kick when these users turn into your brand advocates (read addicts).
-=======
-              When it comes to finding website inspiration for your consulting business, the options can seem overwhelming. To make things easier, we've put together a shortlist of our favorite consulting websites and how they use design to deliver their message..
->>>>>>> 220ec5cd57d24d04d093fa20b16becad27d266c6
+              Artificial Intelligence (AI) is revolutionizing the way businesses operate by automating complex tasks and processes. Automation in AI leverages advanced algorithms and machine learning models to perform tasks that traditionally required human intervention. Our AI automation solutions are designed to help you streamline operations, improve productivity, and achieve your business goals. Whether you're looking to automate customer service, data analysis, or any other process, our AI technologies can provide the efficiency and accuracy you need Here are some key benefits of AI-driven automation.
               </Typography>
               <List>
                 {features.map((feature, index) => (
@@ -103,7 +98,7 @@ const BusinessConsulting = () => {
                       </Typography>
                     </StyledPaper>
                   </Grid> ))} */}
-                <Lottie animationData={businessConsultancy} loop={true}/>
+                <Lottie animationData={automation} loop={true}/>
               </Grid>
             </Grid>
           </Grid>
@@ -113,4 +108,4 @@ const BusinessConsulting = () => {
   );
 };
 
-export default BusinessConsulting;
+export default AutomationInAi;
