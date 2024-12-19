@@ -163,7 +163,7 @@ const ClientsSay: React.FC = () => {
         sx={{
           textDecoration: "underline",
           textAlign: "center",
-          color: "grey",
+          color:'rgb(102, 102, 232)',
           fontWeight: "bold",
           mb: 2
         }}

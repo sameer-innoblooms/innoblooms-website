@@ -1,10 +1,12 @@
 import { Padding, Widgets } from "@mui/icons-material";
-import { Box, Grid, Typography, useMediaQuery, Theme } from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery, Theme, Button } from "@mui/material";
 import { BookX, Scale } from "lucide-react";
 import { transform } from "next/dist/build/swc/generated-native";
+import { useRouter } from 'next/navigation'
 import React from "react";
 
 const Services = () => {
+  const router = useRouter()
   return (
     <div>
       <Box>
@@ -62,15 +64,16 @@ const Services = () => {
               justifyContent:'flex-end',
               p: 3,
               "&:hover  .hiddenContent": {
-                transition:'0.3s ease-in-out',
-                transform: 'Scale(1.05) ',
+                transition:'0.9s ease-in-out',
                 display:'flex',
-                cursor:'pointer'
               },
               "&:hover": {
-                transition:'0.3s ease-in-out',
-                transform: 'Scale(1.05) ',
-              }         
+                transition:'0.5s ease',
+                transform: 'Scale(1.05)',
+                backgroundImage: 'none',
+                backgroundColor: 'black'
+              } 
+
             }}
           
           >
@@ -88,31 +91,40 @@ const Services = () => {
                 display:'none',
                 alignItems:'center',
                 justifyContent:'center',
-                flexDirection:'column'
-              }}
-            >
-              
-              <Typography variant="subtitle1" 
-              sx={{
-              color:"white",
-              lineHeight:'1.1',
-              marginTop:'8px',
-              marginBottom:'-10px',
-              }}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor debitis sint dicta ullam alias eveniet, maiores magnam nobis soluta. Adipisci impedit harum, iusto quaerat amet eius sequi architecto nobis molestias!
-              </Typography>
-              ,
-              <Typography variant="button" color="red"
-               sx={{
-                border:'2px solid red',
-                width:'100px',
-                padding:'3px 5px',
-                borderRadius:'5px'
+                flexDirection:'column',
+
+                "&:hover button": {
+                border:'1px solid black',
+                transition:'0.3s ease',
+                transform: 'Scale(1.05) '
+              }
 
               }}
               >
-                View More
+              
+              <Typography variant="subtitle1" textAlign="center"
+              sx={{
+              color:"white",
+              lineHeight:'1.1',
+              marginBottom:'50px',
+              textShadow:'0px 0px 2px rgb(5, 5, 4)',
+              }}>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor debitis sint dicta ullam alias eveniet, maiores magnam nobis soluta.
               </Typography>
+              ,
+              <Button variant="contained" onClick={() => router.push('/services/business-consulting')}
+               sx={{
+                background:'white',
+                color:'black',
+                border:'1px solid grey',
+                width:'75%',
+                padding:'3px 5px',
+                borderRadius:'5px',
+                textAlign:'center'
+              }}
+              >
+                View More
+              </Button>
             </Box>
           </Box>
         </Grid>
@@ -128,27 +140,83 @@ const Services = () => {
         >
           <Box
             sx={{
-              border: "1px solid #ccc",
+              display:'flex',
+              flexDirection:'column',
+              border: "0.5px solid #ccc",
               borderRadius: 4,
-              backgroundImage:
-                "url('https://5.imimg.com/data5/CN/HB/GLADMIN-36236926/consulting-service-500x500.jpg')",
+              backgroundImage:"url('https://5.imimg.com/data5/CN/HB/GLADMIN-36236926/consulting-service-500x500.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               height: { xs: "250px", sm: "300px", md: "350px" },
-              display: "flex",
-              alignItems: "flex-end",
+              // display: "flex",
+              alignItems: "center",
+              justifyContent:'flex-end',
               p: 3,
+              "&:hover  .hiddenContent": {
+                transition:'0.3s ease',
+                display:'flex',
+              },
+              "&:hover": {
+                transition:'0.5s ease',
+                transform: 'Scale(1.05)',
+                backgroundImage:"none",
+                background:'black'
+              } 
+
             }}
+          
           >
             <Typography
-              variant="h6"
-              sx={{ 
-                fontWeight: "bold", 
-                color: "white" 
-              }}
-            >
-              Resource Augmentation
+              variant="h6" marginLeft='-8px'
+              sx={{
+                fontWeight: "bold",
+                color: "white",
+                textShadow:'1px 1px 10px black',
+              }}>Resource Augmentation
             </Typography>
+
+            <Box className="hiddenContent"
+              sx={{
+                opacity: "1",
+                display:'none',
+                alignItems:'center',
+                justifyContent:'center',
+                flexDirection:'column',
+
+                "&:hover button": {
+                border:'1px solid black',
+                background:'white',
+                transition:'0.3s ease',
+                transform: 'Scale(1.05) '
+              }
+
+              }}
+              >
+              
+              <Typography variant="subtitle1" textAlign="center"
+              sx={{
+              color:"white",
+              lineHeight:'1.1',
+              marginBottom:'50px',
+              textShadow:'1px 1px 10px black',
+              }}>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor debitis sint dicta ullam alias eveniet, maiores magnam nobis soluta.
+              </Typography>
+              ,
+              <Button variant="contained" onClick={() => router.push('/services/business-consulting')}
+               sx={{
+                background:'white',
+                color:'black',
+                border:'2px solid grey',
+                width:'75%',
+                padding:'3px 5px',
+                borderRadius:'5px',
+                textAlign:'center'
+              }}
+              >
+                View More
+              </Button>
+            </Box>
           </Box>
         </Grid>
 
@@ -163,27 +231,82 @@ const Services = () => {
         >
           <Box
             sx={{
-              border: "1px solid #ccc",
+              display:'flex',
+              flexDirection:'column',
+              border: "0.5px solid #ccc",
               borderRadius: 4,
-              backgroundImage:
-                "url('https://i.gifer.com/origin/5a/5ab98406cc6c8fbba9ddb014c2bcdb80_w200.gif')",
+              backgroundImage:"url('https://i.gifer.com/origin/5a/5ab98406cc6c8fbba9ddb014c2bcdb80_w200.gif')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               height: { xs: "250px", sm: "300px", md: "350px" },
-              display: "flex",
-              alignItems: "flex-end",
+              // display: "flex",
+              alignItems: "center",
+              justifyContent:'flex-end',
               p: 3,
+              "&:hover  .hiddenContent": {
+                transition:'0.3s ease',
+                display:'flex',
+              },
+              "&:hover": {
+                transition:'0.5s ease',
+                transform: 'Scale(1.05) ',
+                backgroundImage: 'none',
+                backgroundColor: 'black'
+              } 
+
             }}
+          
           >
             <Typography
-              variant="h6"
-              sx={{ 
-                fontWeight: "bold", 
-                color: "white" 
-              }}
-            >
-              Automation with AI
+              variant="h6" marginLeft='-8px'
+              sx={{
+                textShadow:'1',
+                fontWeight: "bold",
+                color: "white",
+              }}>Automation with AI
             </Typography>
+
+            <Box className="hiddenContent"
+              sx={{
+                opacity: "1",
+                display:'none',
+                alignItems:'center',
+                justifyContent:'center',
+                flexDirection:'column',
+
+                "&:hover button": {
+                border:'1px solid black',
+                background:'white',
+                transition:'0.3s ease',
+                transform: 'Scale(1.05) '
+              }
+
+              }}
+              >
+              
+              <Typography variant="subtitle1" textAlign="center"
+              sx={{
+              color:"white",
+              lineHeight:'1.1',
+              marginBottom:'50px'
+              }}>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor debitis sint dicta ullam alias eveniet, maiores magnam nobis soluta.
+              </Typography>
+              ,
+              <Button variant="contained" onClick={() => router.push('/services/automation-with-ai')}
+               sx={{
+                background:'white',
+                color:'black',
+                border:'2px solid grey',
+                width:'75%',
+                padding:'3px 5px',
+                borderRadius:'5px',
+                textAlign:'center'
+              }}
+              >
+                View More
+              </Button>
+            </Box>
           </Box>
         </Grid>
 
@@ -198,27 +321,81 @@ const Services = () => {
         >
           <Box
             sx={{
-              border: "1px solid #ccc",
+              display:'flex',
+              flexDirection:'column',
+              border: "0.5px solid #ccc",
               borderRadius: 4,
-              backgroundImage:
-                "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfcbTOtAiENq2m9sVfBJH0GzBY3_WYViSNRA&s')",
+              backgroundImage:"url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfcbTOtAiENq2m9sVfBJH0GzBY3_WYViSNRA&s')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               height: { xs: "250px", sm: "300px", md: "350px" },
-              display: "flex",
-              alignItems: "flex-end",
+              // display: "flex",
+              alignItems: "center",
+              justifyContent:'flex-end',
               p: 3,
+              "&:hover  .hiddenContent": {
+                transition:'0.3s ease',
+                display:'flex',
+              },
+              "&:hover": {
+                transition:'0.5s ease',
+                transform: 'Scale(1.05)',
+                backgroundImage: 'none',
+                backgroundColor: 'black'
+              } 
+
             }}
+          
           >
             <Typography
-              variant="h6"
-              sx={{ 
-                fontWeight: "bold", 
-                color: "white" 
-              }}
-            >
-              Software Services
+              variant="h6" marginLeft='-8px'
+              sx={{
+                fontWeight: "bold",
+                color: "white",
+              }}>Software Services
             </Typography>
+
+            <Box className="hiddenContent"
+              sx={{
+                opacity: "1",
+                display:'none',
+                alignItems:'center',
+                justifyContent:'center',
+                flexDirection:'column',
+
+                "&:hover button": {
+                border:'1px solid black',
+                background:'white',
+                transition:'0.3s ease',
+                transform: 'Scale(1.05) '
+              }
+
+              }}
+              >
+              
+              <Typography variant="subtitle1" textAlign="center"
+              sx={{
+              color:"white",
+              lineHeight:'1.1',
+              marginBottom:'50px'
+              }}>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor debitis sint dicta ullam alias eveniet, maiores magnam nobis soluta.
+              </Typography>
+              ,
+              <Button variant="contained" onClick={() => router.push('/services/software-services')}
+               sx={{
+                background:'white',
+                color:'black',
+                border:'2px solid grey',
+                width:'75%',
+                padding:'3px 5px',
+                borderRadius:'5px',
+                textAlign:'center'
+              }}
+              >
+                View More
+              </Button>
+            </Box>
           </Box>
         </Grid>
       </Grid>

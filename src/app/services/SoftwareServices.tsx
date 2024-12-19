@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import Lottie from 'lottie-react';
-import businessConsultancy from '../lotties/businessConsultancy.json'
+import softwareservices from '../lotties/softwareservices.json'
 import { 
   Box, 
   Container, 
@@ -25,6 +25,7 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(3),
   textAlign: 'center',
   backgroundColor: theme.palette.background.paper,
+  marginTop:'500px',
   height: '100%',
   display: 'flex',
   flexDirection: 'column',
@@ -32,13 +33,14 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   alignItems: 'center',
 }));
 
-const TechIcon = styled('img')({
-  width: 60,
-  height: 60,
-  marginBottom: 16,
-});
+// const TechIcon = styled('img')({
+//   width: 60,
+//   height: 60,
+//   marginBottom: 16,
+// });
 
-const BusinessConsulting = () => {
+const SoftwareServices = () => {
+  
   const technologies = [
     { name: 'React Native', icon: '/path-to-react-native-icon.svg' },
     { name: 'Swift', icon: '/path-to-swift-icon.svg' },
@@ -47,15 +49,15 @@ const BusinessConsulting = () => {
   ];
 
   const features = [
-    'Financial Consulting',
-    'IT Consulting',
-    'Human Resources Consulting',
-    'Marketing Consulting',
+    'Custom software development services',
+    'Web development services',
+    'Mobile software development services',
+    'Embedded systems development',
   ];
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ bgcolor: 'background.default', 
+      <Box sx={{ bgcolor: 'background.default',
         //  minHeight: '100vh',
           py: 16 }}>
         <Container>
@@ -66,11 +68,11 @@ const BusinessConsulting = () => {
                   UN-PUT-DOWNABLE
                 </Typography> */}
                 <Typography variant="h2" color="primary" fontWeight="bold" gutterBottom>
-                 Business Consultancy
+                    Software Services
                 </Typography>
               </Box>
               <Typography variant="body1" color="text.secondary" paragraph>
-              When it comes to finding website inspiration for your consulting business, the options can seem overwhelming. To make things easier, we've put together a shortlist of our favorite consulting websites and how they use design to deliver their message..
+              Every successful service website shares common elements that are essential for engaging visitors and converting them into clients. Consider clear service descriptions and compelling portfolios, client testimonials, and easy-to-use contact forms. We will find and analyze these key features in the examples so you can get valuable insights, inspiration, and ideas for your service website project. Let’s go!.
               </Typography>
               <List>
                 {features.map((feature, index) => (
@@ -97,14 +99,16 @@ const BusinessConsulting = () => {
                       </Typography>
                     </StyledPaper>
                   </Grid> ))} */}
-                <Lottie animationData={businessConsultancy} loop={true}/>
+                <Lottie animationData={softwareservices} loop={true}/>
               </Grid>
             </Grid>
           </Grid>
         </Container>
+        
       </Box>
+      
     </ThemeProvider>
   );
 };
 
-export default BusinessConsulting;
+export default SoftwareServices;

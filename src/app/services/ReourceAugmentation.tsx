@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import Lottie from 'lottie-react';
-import businessConsultancy from '../lotties/businessConsultancy.json'
+import resource from '../lotties/resource.json'
 import { 
   Box, 
   Container, 
@@ -38,7 +38,8 @@ const TechIcon = styled('img')({
   marginBottom: 16,
 });
 
-const BusinessConsulting = () => {
+const ReourceAugmentation = () => {
+  
   const technologies = [
     { name: 'React Native', icon: '/path-to-react-native-icon.svg' },
     { name: 'Swift', icon: '/path-to-swift-icon.svg' },
@@ -47,15 +48,15 @@ const BusinessConsulting = () => {
   ];
 
   const features = [
-    'Financial Consulting',
-    'IT Consulting',
-    'Human Resources Consulting',
-    'Marketing Consulting',
+    'Flexibility:',
+    'Cost-Efficiency',
+    'Access to Expertise',
+    'Accelerated Delivery',
   ];
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ bgcolor: 'background.default', 
+      <Box sx={{ bgcolor: 'background.default',
         //  minHeight: '100vh',
           py: 16 }}>
         <Container>
@@ -66,11 +67,11 @@ const BusinessConsulting = () => {
                   UN-PUT-DOWNABLE
                 </Typography> */}
                 <Typography variant="h2" color="primary" fontWeight="bold" gutterBottom>
-                 Business Consultancy
+                    Resource Augmentation
                 </Typography>
               </Box>
               <Typography variant="body1" color="text.secondary" paragraph>
-              When it comes to finding website inspiration for your consulting business, the options can seem overwhelming. To make things easier, we've put together a shortlist of our favorite consulting websites and how they use design to deliver their message..
+                In today's fast-paced business environment, having the right resources at the right time is crucial for success. Resource augmentation is a strategic approach that allows businesses to enhance their existing teams with skilled professionals on a temporary or project-specific basis. Our resource augmentation services are designed to help you achieve your business goals efficiently and effectively. Whether you need additional support for a short-term project or specialized skills for a complex task, we have the right professionals to meet your needs. This model offers several key benefits:.
               </Typography>
               <List>
                 {features.map((feature, index) => (
@@ -97,7 +98,7 @@ const BusinessConsulting = () => {
                       </Typography>
                     </StyledPaper>
                   </Grid> ))} */}
-                <Lottie animationData={businessConsultancy} loop={true}/>
+                <Lottie animationData={resource} loop={true}/>
               </Grid>
             </Grid>
           </Grid>
@@ -107,4 +108,4 @@ const BusinessConsulting = () => {
   );
 };
 
-export default BusinessConsulting;
+export default ReourceAugmentation;
