@@ -176,8 +176,8 @@
             background:
               pathname === "/ourpartners" ||
               pathname === "/services" ||
-              pathname === "/blogs" ||
-              pathname === "/aboutus" ||
+              // pathname === "/blogs" ||
+              // pathname === "/aboutus" ||
               trigger
                 ? "#000000"
                 : "transparent",

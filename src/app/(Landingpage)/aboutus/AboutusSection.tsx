@@ -21,7 +21,7 @@ export default function AboutusSection() {
             mx: "auto",
           }}
         >
-          <Typography
+          {/* <Typography
             variant="overline"
             sx={{
               color: "text.secondary",
@@ -32,7 +32,7 @@ export default function AboutusSection() {
             }}
           >
             ABOUT US
-          </Typography>
+          </Typography> */}
 
           <Typography
             variant="h2"

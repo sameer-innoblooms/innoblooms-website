@@ -4,12 +4,12 @@ import { Box, Typography } from "@mui/material";
 import Overview from "./Overview";
 import ServicesAccordion from "@/app/components/ServicesAccordian";
 import Footer from "@/app/Footer";
-import WhatWeDo from "./TypesPage";
+import WhatWeDo from "./WhatwedoBusiness";
+import Breadcrumb from "@/app/components/Breadcrumb";
 
 const page = () => {
   return (
     <div>
-      <Container maxWidth="xl" disableGutters>
         <Box
           sx={{
             display: "flex",
@@ -45,11 +45,24 @@ const page = () => {
             align="center"
             sx={{
               zIndex: 9,
+              mb:2
             }}
           >
             Business Consulting
           </Typography>
-          <Typography
+          <Box sx={{
+            zIndex: 9,
+            width: '700px',
+            display: 'flex',
+            justifyContent: 'center',
+            justifyItems: 'center',
+            alignItems: 'center',
+            flexDirection: 'column'
+          }}>
+          <Breadcrumb/>
+
+          </Box>
+          {/* <Typography
             variant="body1"
             color="white"
             sx={{
@@ -60,13 +73,12 @@ const page = () => {
             Overcome challenges, tap into opportunities and achieve your
             business potential. Our experienced consultants provide customized
             solutions that suit the needs at every level.
-          </Typography>
+          </Typography> */}
         </Box>
         <Overview />
         <WhatWeDo />
         <ServicesAccordion />
         <Footer />
-      </Container>
     </div>
   );
 };

@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-import { Box, Grid, Typography } from "@mui/material";
-=======
-import { Padding, Widgets } from "@mui/icons-material";
-import { Box, Grid, Typography, useMediaQuery, Theme, Button } from "@mui/material";
-import { BookX, Scale } from "lucide-react";
-import { transform } from "next/dist/build/swc/generated-native";
+import { Box, Grid, Typography, Button } from "@mui/material";
 import { useRouter } from 'next/navigation'
->>>>>>> 220ec5cd57d24d04d093fa20b16becad27d266c6
 import React from "react";
 
 const Services = () => {
@@ -207,7 +200,7 @@ const Services = () => {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor debitis sint dicta ullam alias eveniet, maiores magnam nobis soluta.
               </Typography>
               ,
-              <Button variant="contained" onClick={() => router.push('/services/business-consulting')}
+              <Button variant="contained" onClick={() => router.push('/services/resource-augmentation')}
                sx={{
                 background:'white',
                 color:'black',

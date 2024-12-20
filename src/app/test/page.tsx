@@ -1,5 +1,5 @@
 import React from 'react'
-import WhatWeDo from '../(Landingpage)/services/business-consulting/TypesPage'
+import WhatWeDo from '../(Landingpage)/services/business-consulting/WhatwedoBusiness'
 
 const page = () => {
   return (

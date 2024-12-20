@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import React from 'react'
+import React from "react";
 import {
   Container,
   Typography,
@@ -9,70 +9,94 @@ import {
   Avatar,
   AvatarGroup,
   styled,
-  useMediaQuery
-} from '@mui/material'
-import { ArrowForward as ArrowForwardIcon } from '@mui/icons-material'
-import Image from 'next/image'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
-import Slider from 'react-slick'
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+  useMediaQuery,
+} from "@mui/material";
+import { ArrowForward as ArrowForwardIcon } from "@mui/icons-material";
+import Image from "next/image";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#000000',
+      main: "#000000",
     },
     background: {
-      default: '#ffffff',
+      default: "#ffffff",
     },
   },
-})
+});
 
-const StyledImage = styled(Image)(({  }) => ({
-  maxWidth: '100%',
-  height: 'auto',
-  objectFit: 'contain',
-  transition: 'opacity 0.3s ease-in-out',
-  '&:hover': {
+const StyledImage = styled(Image)(({}) => ({
+  maxWidth: "100%",
+  height: "auto",
+  objectFit: "contain",
+  transition: "opacity 0.3s ease-in-out",
+  "&:hover": {
     opacity: 0.8,
   },
-}))
+}));
 
 export default function PartnersPage() {
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'))
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
   const partners = [
-    { logo: "/catalyze-capital.png", name: "Catalyze Capital" },
-    { logo: "/gr-associates.png", name: "GR Associates" },
-    { logo: "/krishnanath.png", name: "Krishnanath" },
-    { logo: "/propshell.png", name: "Propshell" },
-    { logo: "/saya.png", name: "SAYA" },
-    { logo: "/divyasree.png", name: "DivyaSree" },
-    { logo: "/harbans.png", name: "Harbans Creations" },
-    { logo: "/benchmark.png", name: "Benchmark Developers" },
-    { logo: "/icipl.png", name: "ICIPL" },
-    { logo: "/skyline.png", name: "Skyline" },
-    { logo: "/esha.png", name: "Esha" },
-    { logo: "/harmony.png", name: "Harmony" },
-    { logo: "/map-infra.png", name: "MAP Infra" },
-    { logo: "/pyramids.png", name: "Pyramids" },
-    { logo: "/subham.png", name: "Subham" },
-    { logo: "/elemental.png", name: "Elemental" },
-    { logo: "/stone.png", name: "Stone Co" },
-    { logo: "/navayuga.png", name: "Navayuga" },
-    { logo: "/rishita.png", name: "Rishita" },
-    { logo: "/triflas.png", name: "Triflas" },
+    { logo: "/ourpartners/amazon-logo.png", name: "Amazon" },
+    { logo: "/ourpartners/microsoft-logo.png", name: "Microsoft" },
+    { logo: "/ourpartners/Adobe_Corporate_Logo.png", name: "Adobe" },
+    { logo: "/ourpartners/apex-legends-logo.png", name: "Apex" },
+    { logo: "/ourpartners/Digiflip_logo.png", name: "Digiflip" },
+    { logo: "/ourpartners/CARS24_Official_New_Logo.png", name: "Cars24" },
+    { logo: "/ourpartners/CloudConnect_Logo.png", name: "CloudConnect" },
+    { logo: "/ourpartners/Kentico.png", name: "Kentico" },
+    { logo: "/ourpartners/amazon-logo.png", name: "Amazon" },
+    { logo: "/ourpartners/microsoft-logo.png", name: "Microsoft" },
+    { logo: "/ourpartners/Adobe_Corporate_Logo.png", name: "Adobe" },
+    { logo: "/ourpartners/apex-legends-logo.png", name: "Apex" },
+    { logo: "/ourpartners/Digiflip_logo.png", name: "Digiflip" },
+    { logo: "/ourpartners/CARS24_Official_New_Logo.png", name: "Cars24" },
+    { logo: "/ourpartners/CloudConnect_Logo.png", name: "CloudConnect" },
+    { logo: "/ourpartners/Kentico.png", name: "Kentico" },
+    { logo: "/ourpartners/amazon-logo.png", name: "Amazon" },
+    { logo: "/ourpartners/microsoft-logo.png", name: "Microsoft" },
+    { logo: "/ourpartners/Adobe_Corporate_Logo.png", name: "Adobe" },
+    { logo: "/ourpartners/apex-legends-logo.png", name: "Apex" },
+    { logo: "/ourpartners/Digiflip_logo.png", name: "Digiflip" },
+    { logo: "/ourpartners/CARS24_Official_New_Logo.png", name: "Cars24" },
+    { logo: "/ourpartners/CloudConnect_Logo.png", name: "CloudConnect" },
+    { logo: "/ourpartners/Kentico.png", name: "Kentico" },
+    { logo: "/ourpartners/amazon-logo.png", name: "Amazon" },
+    { logo: "/ourpartners/microsoft-logo.png", name: "Microsoft" },
+    { logo: "/ourpartners/Adobe_Corporate_Logo.png", name: "Adobe" },
+    { logo: "/ourpartners/apex-legends-logo.png", name: "Apex" },
+    { logo: "/ourpartners/Digiflip_logo.png", name: "Digiflip" },
+    { logo: "/ourpartners/CARS24_Official_New_Logo.png", name: "Cars24" },
+    { logo: "/ourpartners/CloudConnect_Logo.png", name: "CloudConnect" },
+    { logo: "/ourpartners/Kentico.png", name: "Kentico" },
     // Add all other partners similarly
-  ]
+  ];
 
   const teamAvatars = [
-    { avatar: "/avatar1.png?height=48&width=48&text=👤1", name: "Team Member 1" },
-    { avatar: "/avatar2.png?height=48&width=48&text=👤2", name: "Team Member 2" },
-    { avatar: "/avatar3.png?height=48&width=48&text=👤3", name: "Team Member 3" },
-    { avatar: "/avatar1.png?height=48&width=48&text=👤4", name: "Team Member 4" },
-  ]
+    {
+      avatar: "/ourpartners/avatar1.jpg?height=48&width=48&text=👤1",
+      name: "Team Member 1",
+    },
+    {
+      avatar: "/ourpartners/avatar2.jpg?height=48&width=48&text=👤2",
+      name: "Team Member 2",
+    },
+    {
+      avatar: "/ourpartners/avatar3.jpg?height=48&width=48&text=👤3",
+      name: "Team Member 3",
+    },
+    {
+      avatar: "/ourpartners/avatar4.jpg?height=48&width=48&text=👤4",
+      name: "Team Member 4",
+    },
+  ];
 
   const settings = {
     dots: false,
@@ -92,17 +116,17 @@ export default function PartnersPage() {
         settings: {
           slidesToShow: 3,
           rows: 4,
-        }
+        },
       },
       {
         breakpoint: theme.breakpoints.values.sm,
         settings: {
           slidesToShow: 2,
           rows: 4,
-        }
-      }
-    ]
-  }
+        },
+      },
+    ],
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -111,48 +135,61 @@ export default function PartnersPage() {
           <Typography variant="overline" color="text.secondary" gutterBottom>
             Partners & Team
           </Typography>
-          <Typography variant="h4" component="h1" gutterBottom fontWeight="bold">
+          <Typography
+            variant="h4"
+            component="h1"
+            gutterBottom
+            fontWeight="bold"
+          >
             Collaborative Excellence: Building Bridges, Driving Success
           </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 'sm' }}>
-            Empowering partnerships and fostering teamwork to achieve unparalleled excellence. 
-            Our dedicated approach and shared vision create a synergy that fuels innovation 
-            and drives sustainable success for all.
+          <Typography
+            variant="body1"
+            color="text.secondary"
+            sx={{ maxWidth: "sm" }}
+          >
+            Empowering partnerships and fostering teamwork to achieve
+            unparalleled excellence. Our dedicated approach and shared vision
+            create a synergy that fuels innovation and drives sustainable
+            success for all.
           </Typography>
         </Box>
 
-        <Box sx={{ 
-          mb: 4,
-          '.slick-slide': {
-            padding: '8px',
-          },
-          '.slick-arrow': {
-            '&:before': {
-              color: '#000',
-            }
-          },
-          '.slick-track': {
-            display: 'flex',
-          }
-        }}>
+        <Box
+          sx={{
+            mb: 4,
+            ".slick-slide": {
+              padding: "8px",
+            },
+            ".slick-arrow": {
+              "&:before": {
+                color: "#000",
+              },
+            },
+            ".slick-track": {
+              display: "flex",
+            },
+          }}
+        >
           <Slider {...settings}>
             {partners.map((partner, index) => (
               <Box key={index}>
                 <Box
                   sx={{
                     height: 100,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    backgroundColor: 'white',
-                    border: '1px solid',
-                    borderColor: 'grey.200',
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: "white",
+                    border: "1px solid",
+                    borderColor: "grey.200",
                     borderRadius: 1,
                     p: 2,
-                    transition: 'all 0.3s ease-in-out',
-                    '&:hover': {
+                    m:0.2,
+                    transition: "all 0.3s ease-in-out",
+                    "&:hover": {
                       boxShadow: 2,
-                      borderColor: 'grey.300',
+                      borderColor: "grey.300",
                     },
                   }}
                 >
@@ -162,8 +199,8 @@ export default function PartnersPage() {
                     width={120}
                     height={60}
                     style={{
-                      maxWidth: '100%',
-                      height: 'auto',
+                      maxWidth: "100%",
+                      height: "auto",
                     }}
                   />
                 </Box>
@@ -174,24 +211,29 @@ export default function PartnersPage() {
 
         <Box
           sx={{
-            display: 'flex',
-            flexDirection: { xs: 'column', sm: 'row' },
-            alignItems: { xs: 'flex-start', sm: 'center' },
-            justifyContent: 'space-between',
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            alignItems: { xs: "flex-start", sm: "center" },
+            justifyContent: "space-between",
             gap: 2,
-            bgcolor: 'grey.50',
+            bgcolor: "grey.50",
             p: 3,
             borderRadius: 2,
           }}
         >
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
             <AvatarGroup max={4}>
               {teamAvatars.map((member, index) => (
                 <Avatar
                   key={index}
                   src={member.avatar}
                   alt={`${member.name}`}
-                  sx={{ width: 48, height: 48, border: 4, borderColor: 'background.paper' }}
+                  sx={{
+                    width: 48,
+                    height: 48,
+                    border: 4,
+                    borderColor: "background.paper",
+                  }}
                 />
               ))}
             </AvatarGroup>
@@ -203,9 +245,9 @@ export default function PartnersPage() {
             variant="contained"
             endIcon={<ArrowForwardIcon />}
             sx={{
-              '&:hover .MuiSvgIcon-root': {
-                transform: 'translateX(4px)',
-                transition: 'transform 0.2s',
+              "&:hover .MuiSvgIcon-root": {
+                transform: "translateX(4px)",
+                transition: "transform 0.2s",
               },
             }}
           >
@@ -214,6 +256,5 @@ export default function PartnersPage() {
         </Box>
       </Container>
     </ThemeProvider>
-  )
+  );
 }
-

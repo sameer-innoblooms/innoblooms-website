@@ -5,15 +5,10 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'
 
 export default function WhyChooseUs() {
   const benefits = [
-    "Sincere, experienced and dedicated team.",
-    "Use of latest and flexible Agile development model.",
-    "UI/UX expertise, building user friendly applications.",
-    "Quality standards & adherence to best coding guidelines.",
-    "Proper use of patterns on frontend, unified code style for JavaScript.",
-    "Supply engagement models – fixed cost, part-time hiring, full-time hiring, etc.",
-    "QA, Presentation, load & stress testing before delivery.",
-    "Scalable infrastructure support for your business necessities.",
-    "Use of Version Control Systems to manage and document changes to source code over time."
+    { title: "Innovation at the Core:", description: " We believe in combining technology and creativity to design robust IT solutions that solve real-world problems." },
+    { title: "Domain Expertise:", description: " With a strong focus on Real Estate, Manufacturing, Finance, eCommerce, and Trading, our deep industry knowledge ensures you get solutions tailored to your business." },
+    { title: "End-to-End Solutions:", description: " From consulting and implementation to support and maintenance, we offer a full spectrum of services." },
+    { title: "Global Standards:", description: " Operating with the latest tools and methodologies, we adhere to global standards to ensure quality and reliability." }
   ]
 
   return (
@@ -22,7 +17,9 @@ export default function WhyChooseUs() {
         <Box sx={{ mb: 6, textAlign: 'center' }}>
           <Typography
             sx={{
-              color: '#8B3DFF',
+              // color: '#8B3DFF',
+              color: '#4A4A4A',
+
               mb: 2,
               fontWeight: 500,
               textTransform: 'uppercase'
@@ -47,7 +44,8 @@ export default function WhyChooseUs() {
           <Grid item xs={12} md={6}>
             <Box
               sx={{
-                bgcolor: '#6B2FB3',
+                // bgcolor: '#6B2FB3',
+                bgcolor: 'black',
                 borderRadius: '32px',
                 p: { xs: 4, md: 6 },
                 height: '100%',
@@ -97,10 +95,18 @@ export default function WhyChooseUs() {
               {benefits.map((benefit, index) => (
                 <ListItem key={index}>
                   <ListItemIcon sx={{ minWidth: 36 }}>
-                    <CheckCircleOutlineIcon sx={{ color: '#6B2FB3' }} />
+                    <CheckCircleOutlineIcon sx={{
+                      //  color: '#6B2FB3'
+
+                      color: 'black'
+                        }} />
                   </ListItemIcon>
                   <ListItemText 
-                    primary={benefit}
+                    primary={
+                      <span>
+                        <strong>{benefit.title}</strong>{benefit.description}
+                      </span>
+                    }
                     sx={{
                       '& .MuiListItemText-primary': {
                         color: '#666666',
@@ -117,4 +123,3 @@ export default function WhyChooseUs() {
     </Box>
   )
 }
-

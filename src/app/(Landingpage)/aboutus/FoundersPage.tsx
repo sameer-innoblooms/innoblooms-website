@@ -117,25 +117,7 @@ export default function FounderPage() {
             secure solutions, delivering measurable value.
           </Typography>
         </Box>
-        {/* </Grid> */}
-
-        {/* <Grid item xs={12} md={6} sx={{}}> */}
-        {/* <ImageContainer */}
-        {/* sx={{
-                left: 950,
-                top: 570,
-              }}
-            >
-              <img
-                src="/CEO.jpeg?height=600&width=800"
-                alt="Shopify team members"
-              />
-              {/* <PlayButton aria-label="Play video"> */}
-        {/* <PlayCircleOutlineIcon />
-              </PlayButton> */}
-        {/* </ImageContainer> */}
-        {/* </Grid>  */}
-        {/* </Grid> */}
+       
         <Box sx={{
             // position: 'relative'
         }}> 
@@ -143,27 +125,31 @@ export default function FounderPage() {
           <Box sx={{}}>
           <Box sx={{
                 zIndex: 1000,
-                bottom:  -400,
+                bottom:  -940,
                 display:{xs: 'none', md: 'block'},
                 right: 222,
-                height: '100px',
-                width: '300px',
+                height: '500px',
+                width: '370px',
                 position: 'absolute',
                 borderRight: "3px solid #76A9FA",
                 borderBottom: "3px solid #76A9FA",
+                borderRadius: '0 0 50% 0',
             }}>
 
             </Box>  
             <ImageContainer
               sx={{
                 left: 935,
-                top: 600,
-                position: {xs: 'static', md: 'absolute'}
+                top: 1140,
+                position: {xs: 'static', md: 'absolute'},
+                borderRadius: '10px 10px 50% 10px',
               }}
             >
               <Image
                 src="/CEO.jpeg?height=600&width=800"
                 alt="Shopify team members"
+                height={600}
+                width={800}
               />
             </ImageContainer>
           </Box>

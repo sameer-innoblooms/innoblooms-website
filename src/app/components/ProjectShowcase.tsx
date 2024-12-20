@@ -148,8 +148,10 @@ export default function ProjectShowcase() {
            }}>
             <Carousel
               animation="slide"
-              navButtonsAlwaysVisible
+              
+              // navButtonsAlwaysVisible
               indicators={false}
+              interval={2100}
               
               onChange={(index: any) => setActiveStep(index)}
               navButtonsProps={{
@@ -157,7 +159,8 @@ export default function ProjectShowcase() {
                   backgroundColor: 'rgba(255, 255, 255, 0.5)',
                   borderRadius: 0,
                   padding: '10px',
-                  color: '#000'
+                  color: '#000',
+                  // transition: 'background-color 10s ease'
                 }
               }}
             >
@@ -180,7 +183,7 @@ export default function ProjectShowcase() {
                     }}
                   />
                   <CardContent sx={{ p: 3 }}>
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
+                    {/* <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
                       <Typography variant="overline" sx={{ 
                         color: 'text.secondary',
                         letterSpacing: 1
@@ -190,9 +193,10 @@ export default function ProjectShowcase() {
                       <Image
                         src={item.flag}
                         alt="Country Flag"
-                        style={{ height: 20 }}
+                        // style={{ height: 20 }}
+                        fill
                       />
-                    </Box>
+                    </Box> */}
                     
                     <Typography variant="h5" sx={{
                       fontWeight: 600,

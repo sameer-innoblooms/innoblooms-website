@@ -1,36 +1,35 @@
-'use client'
-import React from 'react';
-import Lottie from 'lottie-react';
-import softwareservices from '../lotties/softwareservices.json'
-import { 
-  Box, 
-  Container, 
-  Typography, 
-  Grid, 
-  List, 
-  ListItem, 
-  ListItemIcon, 
-  ListItemText, 
+"use client";
+import React from "react";
+import Lottie from "lottie-react";
+import softwareservices from "../lotties/softwareservices.json";
+import {
+  Box,
+  Container,
+  Typography,
+  Grid,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
   Paper,
-  ThemeProvider
-} from '@mui/material';
-import { styled } from '@mui/material/styles';
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import theme from './theme';
-
-
+  ThemeProvider,
+} from "@mui/material";
+import { styled } from "@mui/material/styles";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import theme from "./theme";
+import { usePathname, useRouter } from "next/navigation";
 
 // Custom styled components
 const StyledPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(3),
-  textAlign: 'center',
+  textAlign: "center",
   backgroundColor: theme.palette.background.paper,
-  marginTop:'500px',
-  height: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
+  marginTop: "500px",
+  height: "100%",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
 }));
 
 // const TechIcon = styled('img')({
@@ -40,39 +39,66 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
 // });
 
 const SoftwareServices = () => {
-  
+  const pathname = usePathname();
+  const router = useRouter();
+
   const technologies = [
-    { name: 'React Native', icon: '/path-to-react-native-icon.svg' },
-    { name: 'Swift', icon: '/path-to-swift-icon.svg' },
-    { name: 'Kotlin', icon: '/path-to-kotlin-icon.svg' },
-    { name: 'Flutter', icon: '/path-to-flutter-icon.svg' },
+    { name: "React Native", icon: "/path-to-react-native-icon.svg" },
+    { name: "Swift", icon: "/path-to-swift-icon.svg" },
+    { name: "Kotlin", icon: "/path-to-kotlin-icon.svg" },
+    { name: "Flutter", icon: "/path-to-flutter-icon.svg" },
   ];
 
   const features = [
-    'Custom software development services',
-    'Web development services',
-    'Mobile software development services',
-    'Embedded systems development',
+    "Custom software development services",
+    "Web development services",
+    "Mobile software development services",
+    "Embedded systems development",
   ];
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ bgcolor: 'background.default',
-        //  minHeight: '100vh',
-          py: 16 }}>
+      <Box
+        sx={{
+          bgcolor: "background.default",
+          //  minHeight: '100vh',
+          py: 16,
+        }}
+      >
         <Container>
           <Grid container spacing={6}>
             <Grid item xs={12} md={6}>
-              <Box mb={4}>
+              <Box
+                mb={4}
+                onClick={() => router.push("/services/software-services")}
+                sx={{
+                  cursor: "pointer",
+                  transition: "transform 0.3s ease", // Smooth transition for the scaling effect
+                  "&:hover": {
+                    transform: "scale(1.1)", // Scale the text to 110% on hover
+                  },
+                }}
+              >
                 {/* <Typography variant="overline" color="text.secondary" gutterBottom>
-                  UN-PUT-DOWNABLE
-                </Typography> */}
-                <Typography variant="h2" color="primary" fontWeight="bold" gutterBottom>
-                    Software Services
+                                UN-PUT-DOWNABLE
+                              </Typography> */}
+                <Typography
+                  variant="h2"
+                  color="primary"
+                  fontWeight="bold"
+                  gutterBottom
+                >
+                  Software Services
                 </Typography>
               </Box>
               <Typography variant="body1" color="text.secondary" paragraph>
-              Every successful service website shares common elements that are essential for engaging visitors and converting them into clients. Consider clear service descriptions and compelling portfolios, client testimonials, and easy-to-use contact forms. We will find and analyze these key features in the examples so you can get valuable insights, inspiration, and ideas for your service website project. Let’s go!.
+                Every successful service website shares common elements that are
+                essential for engaging visitors and converting them into
+                clients. Consider clear service descriptions and compelling
+                portfolios, client testimonials, and easy-to-use contact forms.
+                We will find and analyze these key features in the examples so
+                you can get valuable insights, inspiration, and ideas for your
+                service website project. Let’s go!.
               </Typography>
               <List>
                 {features.map((feature, index) => (
@@ -80,9 +106,9 @@ const SoftwareServices = () => {
                     <ListItemIcon>
                       <FiberManualRecordIcon color="primary" fontSize="small" />
                     </ListItemIcon>
-                    <ListItemText 
-                      primary={feature} 
-                      primaryTypographyProps={{ color: 'primary' }}
+                    <ListItemText
+                      primary={feature}
+                      primaryTypographyProps={{ color: "primary" }}
                     />
                   </ListItem>
                 ))}
@@ -99,14 +125,12 @@ const SoftwareServices = () => {
                       </Typography>
                     </StyledPaper>
                   </Grid> ))} */}
-                <Lottie animationData={softwareservices} loop={true}/>
+                <Lottie animationData={softwareservices} loop={true} />
               </Grid>
             </Grid>
           </Grid>
         </Container>
-        
       </Box>
-      
     </ThemeProvider>
   );
 };

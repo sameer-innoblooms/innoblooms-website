@@ -48,10 +48,15 @@ export default function OurProcess() {
           <StyledSection>
             <ProcessNumber>01</ProcessNumber>
             <Grid container spacing={4} alignItems="center">
-              <Grid item xs={12} md={6} sx={{
-                borderLeft: "2px solid #f5f5f5",
-                borderBottom: "2px solid #f5f5f5",
-              }}>
+              <Grid
+                item
+                xs={12}
+                md={6}
+                sx={{
+                  borderLeft: "2px solid #f5f5f5",
+                  borderBottom: "2px solid #f5f5f5",
+                }}
+              >
                 <Typography variant="h5" sx={{ mb: 2, fontWeight: "bold" }}>
                   plan
                 </Typography>
@@ -66,10 +71,12 @@ export default function OurProcess() {
               <Grid item xs={12} md={6}>
                 <Box sx={{ position: "relative", height: 300 }}>
                   <Image
-                    src="https://prium.github.io/twbs-sparrow/v2.4.1/assets/img/illustration/process-01.svg"
+                    src="/images/process-01.svg"
                     alt="Planning illustration"
                     fill
                     style={{ objectFit: "contain" }}
+                    width={1}
+                    height={1}
                   />
                 </Box>
               </Grid>
@@ -95,8 +102,8 @@ export default function OurProcess() {
                   Once the blueprint is approved, we create wireframes and a
                   design using the best within. This process involves intense
                   collaboration between our design team, project management, and
-                  the client team. It&apos;s okay with the discussion to get the best
-                  result. We make sure the design will meet your business
+                  the client team. It&apos;s okay with the discussion to get the
+                  best result. We make sure the design will meet your business
                   values.
                 </Typography>
                 <Button
@@ -118,10 +125,12 @@ export default function OurProcess() {
               <Grid item xs={12} md={6}>
                 <Box sx={{ position: "relative", height: 300 }}>
                   <Image
-                    src="https://prium.github.io/twbs-sparrow/v2.4.1/assets/img/illustration/process-02.svg"
+                    src='/images/process-02.svg'
                     alt="Design illustration"
                     fill
                     style={{ objectFit: "contain" }}
+                    width={1}
+                    height={1}
                   />
                 </Box>
               </Grid>
@@ -148,10 +157,12 @@ export default function OurProcess() {
               <Grid item xs={12} md={6}>
                 <Box sx={{ position: "relative", height: 300 }}>
                   <Image
-                    src="https://prium.github.io/twbs-sparrow/v2.4.1/assets/img/illustration/process-03.svg"
+                    src="/images/process-03.svg"
                     alt="Development illustration"
                     fill
                     style={{ objectFit: "contain" }}
+                    width={1}
+                    height={1}
                   />
                 </Box>
               </Grid>
@@ -174,9 +185,10 @@ export default function OurProcess() {
                   deploy
                 </Typography>
                 <Typography variant="body1" sx={{ mb: 3 }}>
-                  After testing and review, it&apos;s project time and voilaa! Don&apos;t
-                  worry, we won&apos;t leave you hanging. Our team will help you get
-                  optimized for search engines such as Google & Bing.
+                  After testing and review, it&apos;s project time and voilaa!
+                  Don&apos;t worry, we won&apos;t leave you hanging. Our team
+                  will help you get optimized for search engines such as Google
+                  & Bing.
                 </Typography>
                 <Button
                   variant="outlined"
@@ -197,10 +209,12 @@ export default function OurProcess() {
               <Grid item xs={12} md={6}>
                 <Box sx={{ position: "relative", height: 300 }}>
                   <Image
-                    src="https://prium.github.io/twbs-sparrow/v2.4.1/assets/img/illustration/process-04.svg"
+                    src="/images/process-03.svg"
                     alt="Deployment illustration"
                     fill
                     style={{ objectFit: "contain" }}
+                    width={1}
+                    height={1}
                   />
                 </Box>
               </Grid>

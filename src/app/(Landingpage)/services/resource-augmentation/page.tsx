@@ -1,12 +1,13 @@
-<<<<<<< HEAD
 import { Box, Typography } from '@mui/material'
-=======
->>>>>>> 220ec5cd57d24d04d093fa20b16becad27d266c6
 import React from 'react'
+import Overview from './Overview'
+import WhatWeDoResource from './WhatwedoResource'
+import ServicesAccordion from '@/app/components/ServicesAccordian'
+import Footer from '@/app/Footer'
+import Breadcrumb from '@/app/components/Breadcrumb'
 
 const page = () => {
   return (
-<<<<<<< HEAD
     <>
     <Box
           sx={{
@@ -24,7 +25,8 @@ const page = () => {
             position: "relative",
             objectFit: "cover",
             maxHeight: "1500px",
-            backgroundImage: `url(/Business-consulting.jpg)`,
+            backgroundPositionY: -115,
+            backgroundImage: `url(/images/resource-augmentation.jpg)`,
             "&::before": {
               content: '""',
               position: "absolute",
@@ -43,11 +45,24 @@ const page = () => {
             align="center"
             sx={{
               zIndex: 9,
+              mb:2
             }}
           >
             Resource Augmentation
           </Typography>
-          <Typography
+          <Box sx={{
+            zIndex: 9,
+            width: '700px',
+            display: 'flex',
+            justifyContent: 'center',
+            justifyItems: 'center',
+            alignItems: 'center',
+            flexDirection: 'column'
+          }}>
+          <Breadcrumb/>
+
+          </Box>
+          {/* <Typography
             variant="body1"
             color="white"
             sx={{
@@ -58,17 +73,15 @@ const page = () => {
             Overcome challenges, tap into opportunities and achieve your
             business potential. Our experienced consultants provide customized
             solutions that suit the needs at every level.
-          </Typography>
+          </Typography> */}
         </Box>
+        <Overview/>
+        <WhatWeDoResource/>
+        <ServicesAccordion/>
+        <Footer/>
+
     </>
   )
 }
 
 export default page
-=======
-    <div>Resource Augmentation</div>
-  )
-}
-
-export default page
->>>>>>> 220ec5cd57d24d04d093fa20b16becad27d266c6

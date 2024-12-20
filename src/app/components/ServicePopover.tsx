@@ -165,7 +165,7 @@ const ServicesDropdown = () => {
         variant="h6"
         color="black"
         component="div"
-        onClick={() => router.push("/services")}
+        // onClick={() => router.push("/services")}
         sx={{
           color: "white",
           px: 4,
@@ -173,7 +173,9 @@ const ServicesDropdown = () => {
           fontSize: { xs: "16px", sm: "18px" },
           cursor: "pointer",
           fontWeight: 500,
-          borderBottom: pathname === "/services" ? "2px solid white" : "none",
+          // borderBottom: pathname === "/services" ? "2px solid white" : "none",
+          borderBottom: pathname.startsWith("/services") ? "2px solid white" : "none",
+
           // ":hover": {
           //   borderBottom: "2px solid white",
           // },
@@ -275,28 +277,7 @@ const ServicesDropdown = () => {
                       >
                         {serviceGroup.description}
                       </Typography>
-                      {/* <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, flexGrow: 1 }}>
-                        {serviceGroup.subcategories.map((subcat) => (
-                          <Link key={subcat.text} href={subcat.href} passHref>
-                            <Typography
-                              sx={{
-                                color: "#333",
-                                fontSize: "0.9rem",
-                                p: 1,
-                                transition: "all 0.2s ease",
-                                "&:hover": {
-                                  bgcolor: "#f5f5f5",
-                                  borderRadius: "6px",
-                                  color: "#000",
-                                  pl: 2,
-                                },
-                              }}
-                            >
-                              {subcat.text}
-                            </Typography>
-                          </Link>
-                        ))}
-                      </Box> */}
+                     
                       <Link
                         href={`/services/${serviceGroup.category
                           .toLowerCase()

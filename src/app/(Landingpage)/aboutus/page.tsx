@@ -1,75 +1,84 @@
 "use client"
 
-import { Container} from "@mui/material";
+import { Box, Typography} from "@mui/material";
 import React from "react";
 import WorkingProcess from ".";
 import WhyChooseUs from "./WhyChooseUs";
 import FounderPage from "./FoundersPage";
 import AboutusSection from "./AboutusSection";
 import Process from "./Process";
+import Breadcrumb from "./Breadcrumb";
+import Footer from "@/app/Footer";
 
 function About() {
   return (
-    <Container maxWidth="xl" disableGutters>
-      <AboutusSection/>
-      {/* <Box
-        sx={{
-          height: { xs: "50vh", sm: "60vh", md: "70vh" },
-          width: "100%",
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-          backgroundRepeat: "no-repeat",
-          transition: "background-size 0.5s ease",
-          position: "relative",
-          objectFit: "cover",
-          maxHeight: "1500px",
-          backgroundImage: `url('https://img.freepik.com/premium-photo/computer-teamwork-solving-problems-tech-industry_1274913-37557.jpg')`,
-        }}
-      /> */}
-      {/* <Box 
-        sx={{
-          display: 'flex', 
-          flexDirection: { xs: 'column', md: 'row' },
-          justifyContent: 'center',
-          alignItems: 'center',
-          gap: 4,
-          px: { xs: 2, sm: 4, md: 5 },
-          my: { xs: 4, sm: 5 },
-        }}
-      >
-        <Box 
+   <>
+
+      <Box
           sx={{
-            height: { xs: '300px', sm: '400px', md: '500px' },
-            width: '100%',
-            maxWidth: '500px',
-            backgroundImage: `url('https://img.freepik.com/premium-photo/computer-teamwork-solving-problems-tech-industry_1274913-37557.jpg')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
-        <Box 
-          sx={{
-            height: { xs: 'auto', md: '500px' },
-            width: '100%',
-            maxWidth: '500px',
-            bgcolor: 'grey.200',
-            p: { xs: 3, sm: 4, md: 6 },
-            display: 'flex',
-            alignItems: 'center',
+            display: "flex",
+            justifyContent: "center",
+            justifyItems: "center",
+            alignItems: "center",
+            flexDirection: "column",
+            height: { xs: "50vh", sm: "60vh", md: "70vh" },
+            width: "100%",
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            transition: "background-size 0.5s ease",
+            position: "relative",
+            objectFit: "cover",
+            maxHeight: "1500px",
+            // backgroundPositionY: -115,
+            backgroundImage: `url(/images/about-us-background.jpg)`,
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: "rgba(0, 0, 0, 0.5)", // Black overlay with 50% opacity
+              zIndex: 1, // Ensure the overlay is above the background image
+            },
           }}
         >
-          <Typography variant="body1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga fugiat deleniti odit blanditiis illum harum at perspiciatis ut, provident explicabo, tempora ullam? Quo doloremque corrupti beatae non ipsa et, ipsam molestiae eligendi dolorum nostrum cum mollitia, vel pariatur esse modi aut sed aspernatur ullam. Dicta porro assumenda reprehenderit aspernatur iusto?
+          <Typography
+            variant="h1"
+            color="white"
+            align="center"
+            sx={{
+              zIndex: 9,
+              mb:2
+            }}
+          >
+            About Us
           </Typography>
+          <Box sx={{
+            zIndex: 9,
+            width: '700px',
+            display: 'flex',
+            justifyContent: 'center',
+            justifyItems: 'center',
+            alignItems: 'center',
+            flexDirection: 'column'
+          }}>
+          <Breadcrumb/>
+
+          </Box>
+         
         </Box>
-      </Box>   */}
+      <AboutusSection/>
+  
       <FounderPage/>
       <Process/>
       {/* <OurProcess/> */}
       <WorkingProcess />
       <WhyChooseUs/>
+      <Footer/>
       
-    </Container>
+      </>
   );
 }
 

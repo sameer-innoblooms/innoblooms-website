@@ -1,4 +1,4 @@
-  "use client";
+"use client";
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import { Box } from "@mui/material";
@@ -8,7 +8,7 @@ function Home() {
   const SliderDetails = [
     {
       image:
-        "https://png.pngtree.com/background/20230617/original/pngtree-white-futuristic-robot-encased-in-round-machine-with-neon-lights-on-picture-image_3701083.jpg",
+        "/images/Image1.jpg",
       tabContent: {
         text1: " Revolutionize Your Business",
         text2: " with AI-Driven Automation",
@@ -19,18 +19,18 @@ function Home() {
     },
     {
       image:
-        "https://cdn.prod.website-files.com/624ac40503a527cf47af4192/65a8e037a9cf99aabbe9e385_ai-gif-generator-7.gif",
+        "/images/Image2.gif",
       tabContent: {
         text1: " Empower Your Projects with Expert",
         text2: "Resources at Your Fingertips!",
         text3: "Access skilled professionals on demand to enhance your",
-        text4:" team's capabilities and drive projects forward with confidence.",
+        text4:
+          " team's capabilities and drive projects forward with confidence.",
         buttonType: "Get Started",
       },
     },
     {
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4188pvkBUHbO3iGoxnw7ckuiUG7nZ6iDP1w&s",
+      image: "/images/Image3.jfif",
       tabContent: {
         text1: " Drive Transformation with Strategic",
         text2: "Business Consulting",
@@ -41,7 +41,7 @@ function Home() {
     },
     {
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMNSsS4NvtCx7UCOKH3SqcsHhG9-TX1G0DeQ&s",
+        "images/Image4.jfif",
       tabContent: {
         text1: "Innovative Software Solutions",
         text2: "for Your Business",
@@ -54,7 +54,7 @@ function Home() {
 
   return (
     <Box>
-      <Carousel autoPlay={true} interval={2000} indicators={true} >
+      <Carousel autoPlay={true} interval={2000} indicators={true}>
         {SliderDetails.map((item, i) => (
           <Box key={i}>
             <SliderCard item={item} />
@@ -64,4 +64,4 @@ function Home() {
     </Box>
   );
 }
-export default Home;  
+export default Home;

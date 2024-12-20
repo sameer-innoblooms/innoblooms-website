@@ -5,14 +5,16 @@ import Grid from "@mui/material/Grid";
 import { Box, styled } from "@mui/material";
 import Image from "next/image";
 
-const StyledSection = styled(Box)(({ }) => ({
+const StyledSection = styled(Box)(({}) => ({
   //   marginBottom: theme.spacing(12),
   position: "relative",
 }));
 
 export default function Process() {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" sx={{
+      mt: 10,
+    }}>
       <Typography
         variant="h3"
         component="h1"
@@ -90,7 +92,7 @@ export default function Process() {
               <Grid item xs={12} md={6}>
                 <Box sx={{ position: "relative", height: 300 }}>
                   <Image
-                    src="https://prium.github.io/twbs-sparrow/v2.4.1/assets/img/illustration/process-01.svg"
+                    src="/images/process-01.svg"
                     alt="Planning illustration"
                     fill
                     style={{ objectFit: "contain" }}
@@ -131,14 +133,14 @@ export default function Process() {
               >
                 <Box sx={{ position: "relative", height: 300, mb: 10 }}>
                   <Image
-                    src="https://prium.github.io/twbs-sparrow/v2.4.1/assets/img/illustration/process-02.svg"
+                    src="/images/process-02.svg"
                     alt="Planning illustration"
                     fill
                     style={{ objectFit: "contain" }}
                   />
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6} sx={{mt:11}}>
+              <Grid item xs={12} md={6} sx={{ mt: 11 }}>
                 <Typography
                   variant="h5"
                   sx={{ fontWeight: "bold", mb: 2, ml: 5 }}
@@ -214,7 +216,7 @@ export default function Process() {
               <Grid item xs={12} md={6}>
                 <Box sx={{ position: "relative", height: 300 }}>
                   <Image
-                    src="https://prium.github.io/twbs-sparrow/v2.4.1/assets/img/illustration/process-03.svg"
+                    src="/images/process-03.svg"
                     alt="Planning illustration"
                     fill
                     style={{ objectFit: "contain" }}
@@ -255,7 +257,7 @@ export default function Process() {
               >
                 <Box sx={{ position: "relative", height: 300, mb: 10 }}>
                   <Image
-                    src="https://prium.github.io/twbs-sparrow/v2.4.1/assets/img/illustration/process-04.svg"
+                    src="/images/process-04.svg"
                     alt="Planning illustration"
                     fill
                     style={{ objectFit: "contain" }}

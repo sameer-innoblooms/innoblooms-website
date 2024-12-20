@@ -17,6 +17,7 @@ import {
 import { styled } from '@mui/material/styles';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import theme from './theme';
+import { usePathname, useRouter } from 'next/navigation';
 
 
 
@@ -40,6 +41,9 @@ const TechIcon = styled('img')({
 
 const AutomationInAi = () => {
 
+  const pathname = usePathname();
+  const router = useRouter();
+
   const technologies = [
     { name: 'React Native', icon: '/path-to-react-native-icon.svg' },
     { name: 'Swift', icon: '/path-to-swift-icon.svg' },
@@ -62,7 +66,16 @@ const AutomationInAi = () => {
         <Container>
           <Grid container spacing={6}>
             <Grid item xs={12} md={6}>
-              <Box mb={4}>
+              <Box mb={4} 
+              onClick={() => router.push("/services/automation-with-ai")}
+              sx={{
+                cursor: "pointer",
+                transition: "transform 0.3s ease", // Smooth transition for the scaling effect
+                "&:hover": {
+                  transform: "scale(1.1)", // Scale the text to 110% on hover
+                },
+              }}
+              >
                 {/* <Typography variant="overline" color="text.secondary" gutterBottom>
                   UN-PUT-DOWNABLE
                 </Typography> */}

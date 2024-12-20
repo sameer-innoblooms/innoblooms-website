@@ -17,6 +17,7 @@ import {
 import { styled } from '@mui/material/styles';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import theme from './theme';
+import { usePathname, useRouter } from 'next/navigation';
 
 
 
@@ -39,6 +40,10 @@ const TechIcon = styled('img')({
 });
 
 const BusinessConsulting = () => {
+
+  const pathname = usePathname();
+  const router = useRouter();
+
   const technologies = [
     { name: 'React Native', icon: '/path-to-react-native-icon.svg' },
     { name: 'Swift', icon: '/path-to-swift-icon.svg' },
@@ -61,7 +66,17 @@ const BusinessConsulting = () => {
         <Container>
           <Grid container spacing={6}>
             <Grid item xs={12} md={6}>
-              <Box mb={4}>
+              <Box mb={4} 
+              
+            onClick={() => router.push('/services/business-consulting')}
+              sx={{
+                cursor: 'pointer',
+                transition: 'transform 0.3s ease', // Smooth transition for the scaling effect
+                '&:hover': {
+                  transform: 'scale(1.1)', // Scale the text to 110% on hover
+                },
+              }}
+              >
                 {/* <Typography variant="overline" color="text.secondary" gutterBottom>
                   UN-PUT-DOWNABLE
                 </Typography> */}
@@ -70,13 +85,7 @@ const BusinessConsulting = () => {
                 </Typography>
               </Box>
               <Typography variant="body1" color="text.secondary" paragraph>
-<<<<<<< HEAD
-                No, we don&apos;t mind competing with the gold fish in keeping the attention span of your users. 
-                We have built mobile apps for the most impatient, unforgivable of your users. 
-                We feel a kick when these users turn into your brand advocates (read addicts).
-=======
               When it comes to finding website inspiration for your consulting business, the options can seem overwhelming. To make things easier, we've put together a shortlist of our favorite consulting websites and how they use design to deliver their message..
->>>>>>> 220ec5cd57d24d04d093fa20b16becad27d266c6
               </Typography>
               <List>
                 {features.map((feature, index) => (

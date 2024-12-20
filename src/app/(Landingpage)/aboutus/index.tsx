@@ -35,7 +35,10 @@ export default function WorkingProcess() {
       <Box sx={{ textAlign: 'center', mb: 6 }}>
         <Typography 
           variant="overline" 
-          sx={{ color: '#663399', fontWeight: 500, fontSize: 18 }}
+          sx={{
+            //  color: '#663399',
+            // color: 'black',
+             fontWeight: 500, fontSize: 18 }}
         >
           WORKING PROCESS
         </Typography>
