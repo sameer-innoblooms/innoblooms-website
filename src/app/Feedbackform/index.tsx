@@ -33,7 +33,7 @@ function Feedbackform() {
           <Grid
             item
             xs={12}
-            md={7}
+            md={6}
             sx={{
               backgroundImage:
                 `url(${"/feedback-image.jpg"})`,
@@ -43,7 +43,7 @@ function Feedbackform() {
             }}
           />
 
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={6}>
             <Box
               sx={{
                 display: "flex",

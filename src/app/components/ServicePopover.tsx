@@ -167,18 +167,20 @@ const ServicesDropdown = () => {
         component="div"
         // onClick={() => router.push("/services")}
         sx={{
-          color: "white",
+          // color: "white",
           px: 4,
           py: 3,
           fontSize: { xs: "16px", sm: "18px" },
           cursor: "pointer",
           fontWeight: 500,
           // borderBottom: pathname === "/services" ? "2px solid white" : "none",
-          borderBottom: pathname.startsWith("/services") ? "2px solid white" : "none",
+          borderBottom: pathname.startsWith("/services") ? "2px solid #FFB247" : "none",
+          color: pathname.startsWith("/services") ? " #FFB247" : "none",
 
-          // ":hover": {
-          //   borderBottom: "2px solid white",
-          // },
+          ":hover": {
+            // borderBottom: "2px solid #FFB247",
+            color: '#FFB247'
+          },
           display: "inline-block",
         }}
       >

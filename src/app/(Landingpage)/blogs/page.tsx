@@ -2,6 +2,7 @@ import { Box, Container, Typography } from "@mui/material";
 import React from "react";
 import BlogListing from "./Blogs";
 import Breadcrumb from "@/app/components/Breadcrumb";
+import Footer from "@/app/Footer";
 
 const page = () => {
   return (
@@ -74,6 +75,7 @@ const page = () => {
           </Typography> */}
         </Box>
         <BlogListing />
+          <Footer/>
       {/* </Container> */}
     </>
   );

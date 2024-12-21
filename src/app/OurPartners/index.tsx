@@ -98,7 +98,8 @@ const OurPartners: React.FC = () => {
           sx={{
             textDecoration: "underline",
             textAlign: "center",
-            color: "#2F3974",
+            // color: "#2F3974",
+            color: 'black',
             mt: 10,
             fontWeight: "bold",
             textTransform: "uppercase",

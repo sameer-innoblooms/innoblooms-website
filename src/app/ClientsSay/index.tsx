@@ -162,7 +162,8 @@ const ClientsSay: React.FC = () => {
         sx={{
           textDecoration: "underline",
           textAlign: "center",
-          color:'rgb(102, 102, 232)',
+          // color:'rgb(102, 102, 232)',
+          color:'black',
           fontWeight: "bold",
           mb: 2
         }}
@@ -175,7 +176,7 @@ const ClientsSay: React.FC = () => {
           mb: 4,
         }}
       >
-        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 2, color: 'grey' }}>
+        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 2, color: 'black' }}>
           At Innoblooms, we pride ourselves on delivering results that drive success.
         </Typography>
         <Typography variant="body1">

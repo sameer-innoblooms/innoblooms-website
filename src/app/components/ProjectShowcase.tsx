@@ -13,31 +13,36 @@ import {
 } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Carousel from 'react-material-ui-carousel';
-import Image from 'next/image';
 
 const carouselItems = [
   {
     image: "/InnoTrade.png?height=400&width=600",
     category: "CONSUMER PRODUCTS & SERVICES",
     flag: "/placeholder.svg?height=20&width=30",
-    title: "Digital rebirth of Bookclub24 — #1 German online library for book collectors",
+    title: "InnoTrade - In house trading platform",
   },
   {
     image: "InnobloomsERP.png?height=400&width=600",
     category: "E-COMMERCE",
     flag: "/placeholder.svg?height=20&width=30",
-    title: "Redesign of TechGadgets — Leading online electronics store",
+    title: "InnobloomsERP - In house e-commerce platform",
   },
   {
     image: "/InnoTrac.png?height=400&width=600",
     category: "FINTECH",
     flag: "/placeholder.svg?height=20&width=30",
-    title: "Mobile app for QuickPay — Innovative peer-to-peer payment solution",
+    title: "InnoTrac — Innovative peer-to-peer payment solution",
   }
 ];
 
 export default function ProjectShowcase() {
   const [activeStep, setActiveStep] = useState(0);
+  const isBrowser = () => typeof window !== 'undefined'; //The approach recommended by Next.js
+
+  function scrollToTop() {
+      if (!isBrowser()) return;
+      window.scrollTo({ top: 1000, behavior: 'smooth' });
+  }
 
   const ProgressBar = () => (
     <Box sx={{ 
@@ -63,11 +68,11 @@ export default function ProjectShowcase() {
 
   return (
     <Box sx={{ 
-      bgcolor: '#000014', 
-      minHeight: '100vh',
+      bgcolor: '#000000', 
+      // minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
-      py: 8
+      py: 11
     }}>
       <Container maxWidth="xl" sx={{
         
@@ -122,6 +127,7 @@ export default function ProjectShowcase() {
                 </Box>
 
                 <Button
+                onClick={scrollToTop}
                   variant="contained"
                   endIcon={<KeyboardArrowDownIcon />}
                   sx={{

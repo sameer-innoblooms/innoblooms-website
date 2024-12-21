@@ -1,13 +1,7 @@
 "use client";
 
-import {
-  Box,
-  Typography,
-  
-  styled,
-} from "@mui/material";
+import { Box, Typography, styled } from "@mui/material";
 import Image from "next/image";
-
 
 // const PlayButton = styled(IconButton)(({ theme }) => ({
 //   position: "absolute",
@@ -24,7 +18,7 @@ import Image from "next/image";
 // }));
 
 const ImageContainer = styled(Box)(({}) => ({
-//   position: "absolute",
+  //   position: "absolute",
   height: "70%",
   minHeight: "400px",
   //   borderRadius: theme.spacing(2),
@@ -41,7 +35,8 @@ export default function FounderPage() {
     <Box
       sx={{
         // bgcolor: "#F7F7F7",
-        background:"url(https://www.transparenttextures.com/patterns/crossword.png)",
+        background:
+          "url(https://www.transparenttextures.com/patterns/crossword.png)",
         // bgcolor: "aqua",
         py: 8,
       }}
@@ -49,9 +44,9 @@ export default function FounderPage() {
       <Box
         maxWidth="1000px"
         sx={{
-        //   bgcolor: "green",
+          //   bgcolor: "green",
           bgcolor: "#E1EFFE",
-          ml: {xs: 0, md: 20},
+          ml: { xs: 0, md: 20 },
         }}
       >
         {/* <Grid container spacing={1} alignItems="center">
@@ -59,9 +54,9 @@ export default function FounderPage() {
         <Box
           sx={{
             maxWidth: 600,
-            px: {xs: 2},
+            px: { xs: 2 },
             py: 5,
-            ml: {xs: 0, md: 11},
+            ml: { xs: 0, md: 11 },
             display: "flex",
             justifyContent: "center",
             flexDirection: "column",
@@ -117,32 +112,38 @@ export default function FounderPage() {
             secure solutions, delivering measurable value.
           </Typography>
         </Box>
-       
-        <Box sx={{
-            // position: 'relative'
-        }}> 
-         
-          <Box sx={{}}>
-          <Box sx={{
-                zIndex: 1000,
-                bottom:  -940,
-                display:{xs: 'none', md: 'block'},
-                right: 222,
-                height: '500px',
-                width: '370px',
-                position: 'absolute',
-                borderRight: "3px solid #76A9FA",
-                borderBottom: "3px solid #76A9FA",
-                borderRadius: '0 0 50% 0',
-            }}>
 
-            </Box>  
+        <Box
+          sx={
+            {
+              // position: 'relative'
+            }
+          }
+        >
+          <Box sx={{}}>
+            <Box
+              sx={{
+                zIndex: 1000,
+                bottom: -940,
+                display: { xs: "none", md: "block" },
+                right: 222,
+                height: "500px",
+                width: "370px",
+                position: "absolute",
+                // borderRight: "3px solid #76A9FA",
+                // borderBottom: "3px solid #76A9FA",
+                borderRadius: "0 0 50% 0",
+              }}
+            ></Box>
             <ImageContainer
               sx={{
                 left: 935,
-                top: 1140,
-                position: {xs: 'static', md: 'absolute'},
-                borderRadius: '10px 10px 50% 10px',
+                top: 1070,
+                position: { xs: "static", md: "absolute" },
+                borderRadius: "10px 10px 50% 10px",
+                outline: "2px solid rgb(0, 0, 0)",
+
+                outlineOffset: "",
               }}
             >
               <Image

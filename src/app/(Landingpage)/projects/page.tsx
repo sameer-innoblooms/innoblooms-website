@@ -1,5 +1,6 @@
 import ProjectLandingPage from '@/app/components/ProjectLandingPage'
 import ProjectShowcase from '@/app/components/ProjectShowcase'
+import Footer from '@/app/Footer'
 import React from 'react'
 
 const page = () => {
@@ -7,6 +8,7 @@ const page = () => {
     <>
     <ProjectShowcase/>
     <ProjectLandingPage/>
+    <Footer/>
     </>
   )
 }

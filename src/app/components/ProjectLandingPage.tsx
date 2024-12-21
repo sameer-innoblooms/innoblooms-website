@@ -14,24 +14,39 @@ import {
 export default function ProjectLandingPage() {
   const projects = [
     {
-      title: "Building a strong digital presence for a branding studio with a big impact",
-      category: "ADVERTISING & MARKETING",
+      title: "InnoTrac — Innovative peer-to-peer payment solution",
+      category: "PAYMENT & TRANSACTION",
       image: "/InnobloomsERP.png?height=600&width=800",
       backgroundColor: "#CC0000",
-      flag: "🇺🇸"
+      // flag: "🇺🇸"
     },
     {
-      title: "UI/UX for a web platform with all farming needs in one place",
-      category: "AGTECH",
+      title: "InnobloomsERP - In house e-commerce platform",
+      category: "E-COMMERCE",
       image: "/InnoTrac.png?height=600&width=800",
       backgroundColor: "#004D40",
-      flag: "🇺🇸"
+      // flag: "🇺🇸"
+    },
+    {
+      title: "InnoTrac — Innovative peer-to-peer payment solution",
+      category: "PAYMENT & TRANSACTION",
+      image: "/InnobloomsERP.png?height=600&width=800",
+      backgroundColor: "#004D40",
+      // flag: "🇺🇸"
+    },
+    {
+      title: "InnobloomsERP - In house e-commerce platform",
+      category: "E-COMMERCE",
+      image: "/InnoTrac.png?height=600&width=800",
+      backgroundColor: "#004D40",
+      // flag: "🇺🇸"
     }
   ];
 
   return (
     <Box sx={{ 
-      bgcolor: '#000014',
+      // bgcolor: '#000014',
+      bgcolor: '#000000',
       minHeight: '100vh',
       py: { xs: 4, md: 8 },
     }}>
@@ -85,14 +100,14 @@ export default function ProjectLandingPage() {
                     >
                       {project.category}
                     </Typography>
-                    <Typography
+                    {/* <Typography
                       sx={{
                         fontSize: '20px',
                         lineHeight: 1,
                       }}
                     >
                       {project.flag}
-                    </Typography>
+                    </Typography> */}
                   </Box>
 
                   <Typography

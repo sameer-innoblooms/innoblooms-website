@@ -23,7 +23,7 @@ const Services = () => {
         </Typography>
       </Box>
       <Box>
-        <Typography variant="h5" sx={{ textAlign: "center", mt: 2, mb: 2, color: 'grey' }}>
+        <Typography variant="h5" sx={{ textAlign: "center", mt: 2, mb: 2, color: 'black' }}>
           AI automation, consulting, software solutions, and resource
           augmentation.
         </Typography>

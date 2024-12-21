@@ -17,6 +17,8 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Breadcrumb from "./Breadcrumb";
+import Footer from "@/app/Footer";
 
 const theme = createTheme({
   palette: {
@@ -130,11 +132,81 @@ export default function PartnersPage() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="xl" sx={{ py: 6, mt: 10 }}>
-        <Box sx={{ mb: 6 }}>
-          <Typography variant="overline" color="text.secondary" gutterBottom>
+      <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            justifyItems: "center",
+            alignItems: "center",
+            flexDirection: "column",
+            height: { xs: "50vh", sm: "60vh", md: "70vh" },
+            width: "100%",
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            transition: "background-size 0.5s ease",
+            position: "relative",
+            objectFit: "cover",
+            maxHeight: "1500px",
+            backgroundPositionY: -115,
+            backgroundImage: `url(/images/resource-augmentation.jpg)`,
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: "rgba(0, 0, 0, 0.5)", // Black overlay with 50% opacity
+              zIndex: 1, // Ensure the overlay is above the background image
+            },
+          }}
+        >
+          <Typography
+            variant="h1"
+            color="white"
+            align="center"
+            sx={{
+              zIndex: 9,
+              mb:2
+            }}
+          >
             Partners & Team
           </Typography>
+          <Box sx={{
+            zIndex: 9,
+            width: '700px',
+            display: 'flex',
+            justifyContent: 'center',
+            justifyItems: 'center',
+            alignItems: 'center',
+            flexDirection: 'column'
+          }}>
+            <Breadcrumb/>
+          </Box>
+          {/* <Typography
+            variant="body1"
+            color="white"
+            sx={{
+              zIndex: 9,
+              width: '700px'
+            }}
+          >
+            Overcome challenges, tap into opportunities and achieve your
+            business potential. Our experienced consultants provide customized
+            solutions that suit the needs at every level.
+          </Typography> */}
+        </Box>
+      <Container maxWidth="xl" sx={{ py: 6, mt: 1 }} >
+        <Box sx={{ mb: 6, display: 'flex',
+          
+          flexDirection: 'column',
+          // justifyContent: 'center',
+          alignItems: 'center'
+         }}>
+          {/* <Typography variant="overline" color="text.secondary" gutterBottom>
+            Partners & Team
+          </Typography> */}
           <Typography
             variant="h4"
             component="h1"
@@ -146,7 +218,8 @@ export default function PartnersPage() {
           <Typography
             variant="body1"
             color="text.secondary"
-            sx={{ maxWidth: "sm" }}
+            align="center"
+            sx={{ maxWidth: "sm", }}
           >
             Empowering partnerships and fostering teamwork to achieve
             unparalleled excellence. Our dedicated approach and shared vision
@@ -255,6 +328,7 @@ export default function PartnersPage() {
           </Button>
         </Box>
       </Container>
+      <Footer/>
     </ThemeProvider>
   );
 }

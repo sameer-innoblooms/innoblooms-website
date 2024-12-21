@@ -63,14 +63,15 @@
                 color="white"
                 component="div"
                 sx={{
-                  color: 'white',
+                  // color: 'white',
             px: 4,
             py: 3,
             fontSize: { xs: "16px", sm: "18px" },
             cursor: "pointer",
             fontWeight: 500,
                   
-            borderBottom: pathname === link.href && pathname !== '/'? "2px solid white" : "none",
+            borderBottom: pathname === link.href && pathname !== '/'? "2px solid #FFB247 " : "none",
+            color: pathname === link.href && pathname !== '/'? " #FFB247 " : "none",
             // ":hover": {
             //   borderBottom: "2px solid white",
             // },
@@ -174,8 +175,8 @@
           position="fixed"
           sx={{
             background:
-              pathname === "/ourpartners" ||
-              pathname === "/services" ||
+              // pathname === "/ourpartners" ||
+              // pathname === "/services" ||
               // pathname === "/blogs" ||
               // pathname === "/aboutus" ||
               trigger
